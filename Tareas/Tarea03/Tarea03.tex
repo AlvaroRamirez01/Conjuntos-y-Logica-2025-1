@@ -1,0 +1,91 @@
+\documentclass[11pt,answers]{exam}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{mathrsfs}
+\usepackage{array} % Para controlar el ancho de las celdas
+\usepackage{enumitem} % Para personalizar listas
+\usepackage{listings}% http://ctan.org/pkg/listings
+\usepackage{hyperref} % for hyperlinks
+\usepackage{amsmath} % para matemáticas mejoradas
+\usepackage{algorithm} % para escribir pseudocódigos
+\usepackage{algpseudocode} % para escribir pseudocódigos
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+% \usepackage{etoolbox}
+
+% \AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\par\noindent}
+
+\lstset{
+  basicstyle=\ttfamily,
+  mathescape
+}
+
+\graphicspath{{public/}}
+
+\setlength{\topmargin}{-.5in} \setlength{\textheight}{9.25in}
+\setlength{\oddsidemargin}{-0.5in} \setlength{\textwidth}{7.2in}
+
+
+\begin{document}
+\input{cover.tex}
+
+\begin{enumerate}
+
+    \item ¿Cuáles de las siguientes relaciones son funciones? En caso de ser función, calcula su dominio y su imagen:
+    \begin{enumerate}
+        \item $\{(n,m) \in \mathbb{Z} \times \mathbb{Z} : n, m \geq 0 \land 5n = m\}$.
+        \item $\{(n,m) \in \mathbb{Z} \times \mathbb{Z} : n, m \geq 0 \land 5m = n\}$.
+        \item $\{(n,m) \in \mathbb{Z} \times \mathbb{Z} : n, m \geq 0 \land m \leq n\}$.
+        \item $\{(n,m) \in \mathbb{Z} \times \mathbb{Z} : n \geq 0 \land m = 3\}$.
+        \item $\{(n,m) \in \mathbb{Z} \times \mathbb{Z} : m = n^2\}$.
+        \item $\{(n,m) \in \mathbb{Z} \times \mathbb{Z} : m^2 = n^2\}$.
+        \item $\{(n,m) \in \mathbb{Z} \times \mathbb{Z} : 4n + 2m = 6\}$.
+    \end{enumerate}
+
+    \item Determina la inyectividad, suprayectividad y biyectividad de las siguientes funciones:
+    \begin{enumerate}
+        \item $f : \mathbb{N} \rightarrow \mathbb{N}, f(n) = 2n$.
+        \item $f : \mathbb{N} \rightarrow \mathbb{N}, f(n) = n + 7$.
+        \item $f : \mathbb{Z} \rightarrow \mathbb{Z}, f(n) = n + 7$.
+        \item $f : A \rightarrow A/R, f(a) = [a]_R$, donde $A$ es un conjunto y $R$ una relación de equivalencia sobre $A$.
+    \end{enumerate}
+
+    \item Sea $f : A \rightarrow B$ una función. Demuestra que:
+    \begin{enumerate}
+        \item $f$ es inyectiva si y sólo si $f^{-1}[f[X]] = X$, para todo $X \subseteq A$.
+        \item $f$ es inyectiva si y sólo si $f[X \cap Y] = f[X] \cap f[Y]$, para $X, Y \subseteq A$.
+        \item $f$ es suprayectiva si y sólo si $f[f^{-1}[Y]] = Y$, para todo $Y \subseteq B$.
+        \item $f$ es biyectiva si y sólo si $f[X^c] = (f[X])^c$, para todo $X \subseteq A$.
+    \end{enumerate}
+
+    \item Responde las siguientes preguntas:
+    \begin{enumerate}
+        \item ¿Existe $g : \mathbb{N} \rightarrow \mathbb{N}$ función tal que $g \neq \text{Id}_{\mathbb{N}}$ y $g \circ g = g$?
+        \item ¿Existe $g : \mathbb{N} \rightarrow \mathbb{N}$ función biyectiva tal que $g \neq \text{Id}_{\mathbb{N}}$ y $g \circ g = g$?
+        \item ¿Existe $g : \mathbb{N} \rightarrow \mathbb{N}$ función biyectiva tal que $g \neq \text{Id}_{\mathbb{N}}$ y $g \circ g = \text{Id}_{\mathbb{N}}$?
+    \end{enumerate}
+
+    \item (Extra) Sea $f : A \rightarrow B$ una función. Definimos la asignación $F : B \rightarrow A$ con regla de correspondencia $F(Y) = f^{-1}[Y]$. Demuestra que:
+    \begin{enumerate}
+        \item $F$ es función.
+        \item Si $f$ es inyectiva, entonces $F$ es suprayectiva.
+        \item Si $f$ es suprayectiva, entonces $F$ es inyectiva.
+        \item Si $F$ es suprayectiva, entonces $f$ es inyectiva.
+        \item Si $F$ es inyectiva, entonces $F$ es suprayectiva.
+    \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
