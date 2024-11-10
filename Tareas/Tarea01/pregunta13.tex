@@ -1,0 +1,47 @@
+\begin{solution}
+    Para resolver este problema, debemos analizar las declaraciones de cada uno de los sospechosos bajo la suposición de que los dos inocentes dicen la verdad, mientras que el culpable podría estar mintiendo. Denotemos las declaraciones de los sospechosos y analicemos cada una de ellas:
+
+Declaraciones:
+\begin{itemize}
+    \item A dice: "No lo hice. La víctima conocía a B desde hace tiempo, pero C lo detestaba".
+    \item B dice: "No lo hice. Ni siquiera conocía a la víctima. Además estuve fuera toda esa semana".
+    \item C dice: "No lo hice. Vi que A y B estuvieron en el centro con la víctima el día del delito, alguno de ellos debió hacerlo".
+\end{itemize}
+
+Análisis de las declaraciones:
+1. Si \textbf{A es inocente}, entonces lo que dice debe ser verdad. Esto implica que:
+   \begin{itemize}
+        \item \( A \) no es el culpable.
+        \item La víctima conocía a \( B \) desde hace tiempo.
+        \item \( C \) detestaba a la víctima.
+   \end{itemize}
+   
+   Si \( A \) es inocente, debemos suponer que \( B \) o \( C \) es culpable. Si \( B \) es culpable, entonces su declaración sería falsa, lo que implica que \( B \) conocía a la víctima y no estuvo fuera toda la semana, lo cual es coherente con la declaración de \( A \).
+
+   Por otro lado, si \( C \) fuera culpable, entonces su afirmación de que vio a \( A \) y \( B \) en el centro sería falsa. Pero esto entra en conflicto con la declaración de \( A \) si \( A \) es inocente.
+
+2. Si B es inocente, entonces lo que dice debe ser verdad. Esto implica que:
+   \begin{itemize}
+        \item \( B \) no es el culpable.
+        \item \( B \) no conocía a la víctima.
+        \item \( B \) estuvo fuera toda la semana.
+   \end{itemize}
+   
+   Si \( B \) es inocente, entonces debemos suponer que \( A \) o \( C \) es culpable. Si \( A \) es culpable, entonces su declaración es falsa, lo que implicaría que \( A \) sí cometió el crimen. Sin embargo, \( A \) afirma que la víctima conocía a \( B \), lo cual es inconsistente si \( B \) es inocente y dice la verdad al afirmar que no conocía a la víctima.
+
+3. Si C es inocente, entonces lo que dice debe ser verdad. Esto implica que:
+   \begin{itemize}
+        \item \( C \) no es el culpable.
+        \item \( A \) y \( B \) estuvieron en el centro con la víctima el día del delito.
+        \item Alguno de \( A \) o \( B \) es el culpable.
+   \end{itemize}
+
+   Si \( C \) es inocente, esto implica que \( A \) o \( B \) debe ser culpable. Si \( A \) fuera culpable, entonces su declaración es falsa, lo cual es consistente con la afirmación de \( C \) de que \( A \) estuvo con la víctima el día del delito. Además, si \( A \) es culpable, entonces su afirmación sobre \( B \) y \( C \) sería, en parte, falsa.
+
+Conclusión:
+Si asumimos que los dos inocentes dicen la verdad, el análisis sugiere que **A es el culpable**, ya que tanto las declaraciones de \( B \) como de \( C \) son consistentes si asumimos que \( A \) está mintiendo.
+
+\[
+\boxed{A \text{ es el culpable.}}
+\]
+\end{solution}

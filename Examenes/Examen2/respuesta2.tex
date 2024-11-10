@@ -1,0 +1,53 @@
+\begin{solution}
+\textbf{P.D:} que \( R \) es una relación de equivalencia:
+
+La relación \( R \) en \( \mathbb{R}^2 \) está definida de la siguiente manera:
+\[
+(a, b) R (c, d) \iff (a - c) \in \mathbb{Z} \text{ y } (b - d) \in \mathbb{Z}
+\]
+Para demostrar que \( R \) es una relación de equivalencia, debemos verificar que cumple las tres propiedades de una relación de equivalencia: \textbf{reflexiva}, \textbf{simétrica} y \textbf{transitiva}.
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Reflexividad}:
+    Debemos probar que \( (a, b) R (a, b) \) para cualquier \( (a, b) \in \mathbb{R}^2 \).
+    
+    \[
+    a - a = 0 \in \mathbb{Z} \quad \text{y} \quad b - b = 0 \in \mathbb{Z}
+    \]
+    Por lo tanto, \( (a, b) R (a, b) \), lo que demuestra que la relación es reflexiva.
+    \item \textbf{Simetría}:
+    Debemos probar que si \( (a, b) R (c, d) \), entonces \( (c, d) R (a, b) \).
+    
+    Si \( (a, b) R (c, d) \), entonces \( a - c \in \mathbb{Z} \) y \( b - d \in \mathbb{Z} \). Como \( \mathbb{Z} \) es cerrado bajo la negación, tenemos que:
+    \[
+    c - a = -(a - c) \in \mathbb{Z} \quad \text{y} \quad d - b = -(b - d) \in \mathbb{Z}
+    \]
+    Por lo tanto, \( (c, d) R (a, b) \), lo que demuestra que la relación es simétrica.
+    
+    \item \textbf{Transitividad}:
+    Debemos probar que si \( (a, b) R (c, d) \) y \( (c, d) R (e, f) \), entonces \( (a, b) R (e, f) \).
+    
+    Si \( (a, b) R (c, d) \), entonces \( a - c \in \mathbb{Z} \) y \( b - d \in \mathbb{Z} \). Si \( (c, d) R (e, f) \), entonces \( c - e \in \mathbb{Z} \) y \( d - f \in \mathbb{Z} \). Sumando estas ecuaciones, obtenemos:
+    \[
+    (a - c) + (c - e) = a - e \in \mathbb{Z} \quad \text{y} \quad (b - d) + (d - f) = b - f \in \mathbb{Z}
+    \]
+    Por lo tanto, \( (a, b) R (e, f) \), lo que demuestra que la relación es transitiva.
+\end{enumerate}
+
+\textbf{Conclusión:}
+Como la relación \( R \) es reflexiva, simétrica y transitiva, podemos concluir que es una \textbf{relación de equivalencia} en \( \mathbb{R}^2 \).
+
+\textbf{Conjunto cociente:}
+
+El conjunto cociente bajo la relación \( R \) consiste en las clases de equivalencia de los puntos \( (a, b) \in \mathbb{R}^2 \). Dos puntos \( (a, b) \) y \( (c, d) \) están en la misma clase de equivalencia si:
+\[
+a - c \in \mathbb{Z} \quad \text{y} \quad b - d \in \mathbb{Z}
+\]
+Esto implica que los puntos \( (a, b) \) y \( (c, d) \) están en la misma clase de equivalencia cada clase de equivalencia corresponde a una traslación entera en ambas coordenadas.
+
+El conjunto cociente \( \mathbb{R}^2 / R \) es isomorfo al \textbf{torno de lados 1}, que es un conjunto que representa los puntos de \( \mathbb{R}^2 \) módulo las traslaciones enteras:
+\[
+[0, 1) \times [0, 1)
+\]
+donde cada punto en \( [0, 1) \times [0, 1) \) representa una clase de equivalencia de puntos en \( \mathbb{R}^2 \) bajo la relación \( R \).
+\end{solution}

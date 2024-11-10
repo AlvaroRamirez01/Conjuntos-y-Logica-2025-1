@@ -1,0 +1,90 @@
+\begin{solution}
+    \begin{itemize}
+        \item $(A \leftrightarrow (B \leftrightarrow C))$, $((A \land (B \land C)) \lor (\neg A \land (\neg B \land \neg C)))$. 
+        Fórmulas:
+        \begin{itemize}
+            \item $F_1: (A \leftrightarrow (B \leftrightarrow C))$
+            \item $F_2: ((A \land (B \land C)) \lor (\neg A \land (\neg B \land \neg C)))$
+        \end{itemize}   
+
+        Vamos a valuar $F_1$ y $F_2$ con los siguientes valores:
+        \begin{itemize}
+            \item $A = \text{verdadero}$.
+            \item $B = \text{verdadero}$. 
+            \item $C = \text{verdadero}$.
+        \end{itemize}
+
+        Para $F_1$:
+        \[
+        A = \text{verdadero}, B = \text{verdadero}, C = \text{verdadero}
+        \]
+        Evaluamos \( B \leftrightarrow C \):
+        \[
+        B \leftrightarrow C = \text{verdadero}
+        \]
+        Luego, \( A \leftrightarrow (B \leftrightarrow C) \) es:
+        \[
+        \text{verdadero} \leftrightarrow \text{verdadero} = \text{verdadero}
+        \]
+        Entonces, \( F_1 \) es \textbf{verdadera} en esta valuación.
+    
+        Para $F_2$:
+        \[
+        A = \text{verdadero}, B = \text{verdadero}, C = \text{verdadero}
+        \]
+        El primer término \( A \land (B \land C) \) es:
+        \[
+        A \land (B \land C) = \text{verdadero} \land (\text{verdadero} \land \text{verdadero}) = \text{verdadero}
+        \]
+        Por lo tanto, \( F_2 \) es \textbf{verdadera}.
+
+        Se anexa la tabla de verdad para comprobar si existe otros casos donde $F_1$ y $F_2$ se hacen verdaderas:
+
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            $A$ & $B$ & $C$ & $F_1:(A \leftrightarrow (B \leftrightarrow C) $ & $F_2: ((A \land (B \land C)) \lor (\neg A \land (\neg B \land \neg C)))$ \\ \hline
+            \text{V} & \text{V} & \text{V} & \text{V} & \text{V} \\ \hline
+            \text{V} & \text{V} & \text{F} & \text{F} & \text{F} \\ \hline
+            \text{V} & \text{F} & \text{V} & \text{F} & \text{F} \\ \hline
+            \text{V} & \text{F} & \text{F} & \text{V} & \text{F} \\ \hline
+            \text{F} & \text{V} & \text{V} & \text{F} & \text{F} \\ \hline
+            \text{F} & \text{V} & \text{F} & \text{V} & \text{F} \\ \hline
+            \text{F} & \text{F} & \text{V} & \text{F} & \text{F} \\ \hline
+            \text{F} & \text{F} & \text{F} & \text{V} & \text{V} \\ \hline
+            \end{tabular}
+        \end{center}
+
+    
+        Conclusión:
+            En esta valuación, \textbf{ambas} fórmulas \( F_1 \) y \( F_2 \) son \textbf{verdaderas}, por lo tanto esta valuación no demuestra que una implique a la otra.
+    
+        \item Determina si las fórmulas $(A \to (B \leftrightarrow C))$ y $((A \to B) \leftrightarrow (A \to C))$ son lógicamente equivalentes.
+
+        \textbf{Objetivo:} Determinar si las fórmulas 
+\[
+F_1: (A \to (B \leftrightarrow C)) \quad \text{y} \quad F_2: ((A \to B) \leftrightarrow (A \to C))
+\]
+son lógicamente equivalentes.
+
+Para hacerlo, realizaremos una tabla de verdad considerando todas las posibles valuaciones de las variables $A$, $B$, y $C$.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$A$ & $B$ & $C$ & $F_1: (A \to (B \leftrightarrow C))$ & $F_2: ((A \to B) \leftrightarrow (A \to C))$ \\ \hline
+\text{V} & \text{V} & \text{V} & \text{V} & \text{V} \\ \hline
+\text{V} & \text{V} & \text{F} & \text{F} & \text{F} \\ \hline
+\text{V} & \text{F} & \text{V} & \text{F} & \text{F} \\ \hline
+\text{V} & \text{F} & \text{F} & \text{V} & \text{V} \\ \hline
+\text{F} & \text{V} & \text{V} & \text{V} & \text{V} \\ \hline
+\text{F} & \text{V} & \text{F} & \text{V} & \text{V} \\ \hline
+\text{F} & \text{F} & \text{V} & \text{V} & \text{V} \\ \hline
+\text{F} & \text{F} & \text{F} & \text{V} & \text{V} \\ \hline
+\end{tabular}
+\end{center}
+
+\textbf{Conclusión:} Como podemos observar en la tabla de verdad, los valores de $F_1$ y $F_2$ coinciden para todas las posibles valuaciones de $A$, $B$, y $C$. Por lo tanto, las fórmulas $F_1: (A \to (B \leftrightarrow C))$ y $F_2: ((A \to B) \leftrightarrow (A \to C))$ son \textbf{lógicamente equivalentes}.
+
+    \end{itemize}
+\end{solution}

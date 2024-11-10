@@ -1,0 +1,54 @@
+\begin{solution}
+    \begin{itemize}
+        \item ¿Es $(((P \to Q) \to P) \to P)$ una tautología?
+
+        \textbf{Objetivo:} Determinar si la fórmula 
+        \[
+        F: (((P \to Q) \to P) \to P)
+        \]
+        es una tautología.
+        
+        Para hacerlo, construiremos una tabla de verdad y verificaremos si la fórmula es verdadera en todas las posibles valuaciones de $P$ y $Q$.
+        
+        \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        $P$ & $Q$ & $P \to Q$ & $(P \to Q) \to P$ & $(((P \to Q) \to P) \to P)$ \\ \hline
+        \text{V} & \text{V} & \text{V} & \text{V} & \text{V} \\ \hline
+        \text{V} & \text{F} & \text{F} & \text{V} & \text{V} \\ \hline
+        \text{F} & \text{V} & \text{V} & \text{F} & \text{F} \\ \hline
+        \text{F} & \text{F} & \text{V} & \text{F} & \text{F} \\ \hline
+        \end{tabular}
+        \end{center}
+        
+        \textbf{Conclusión:} La fórmula $(((P \to Q) \to P) \to P)$ no es una tautología, ya que no es verdadera para todas las valuaciones. En particular, es falsa cuando $P$ es falso.
+        
+
+        \item Determina si la fórmula $((A \lor \neg (B \land C)) \to ((A \leftrightarrow C) \lor B))$ es una tautología.
+
+        Igualmente, para esta pregunta usaremos una tabla de verdad
+
+        Definimos la formula asi:
+        \[
+        F: ((A \lor \neg (B \land C)) \to ((A \leftrightarrow C) \lor B))
+        \]
+
+        Ahora haremos su tabla de verdad
+
+        \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+        \hline
+        $A$ & $B$ & $C$ & $B \land C$ & $\neg (B \land C)$ & $A \lor \neg (B \land C)$ & $A \leftrightarrow C$ & $(A \leftrightarrow C) \lor B$ & $F$ \\ \hline
+        \text{V} & \text{V} & \text{V} & \text{V} & \text{F} & \text{V} & \text{V} & \text{V} & \text{V} \\ \hline
+        \text{V} & \text{V} & \text{F} & \text{F} & \text{V} & \text{V} & \text{F} & \text{V} & \text{V} \\ \hline
+        \text{V} & \text{F} & \text{V} & \text{F} & \text{V} & \text{V} & \text{V} & \text{V} & \text{V} \\ \hline
+        \text{V} & \text{F} & \text{F} & \text{F} & \text{V} & \text{V} & \text{V} & \text{V} & \text{V} \\ \hline
+        \text{F} & \text{V} & \text{V} & \text{V} & \text{F} & \text{F} & \text{F} & \text{V} & \text{V} \\ \hline
+        \text{F} & \text{V} & \text{F} & \text{F} & \text{V} & \text{V} & \text{F} & \text{V} & \text{V} \\ \hline
+        \text{F} & \text{F} & \text{V} & \text{F} & \text{V} & \text{V} & \text{F} & \text{F} & \text{V} \\ \hline
+        \text{F} & \text{F} & \text{F} & \text{F} & \text{V} & \text{V} & \text{V} & \text{V} & \text{V} \\ \hline
+        \end{tabular}
+        \end{center}
+         Conclusión: En todas las posibles valuaciones de \( A \), \( B \), y \( C \), el valor de la fórmula es siempre \textbf{verdadero}. Por lo tanto, la fórmula \( ((A \lor \neg (B \land C)) \to ((A \leftrightarrow C) \lor B)) \) es una \textbf{tautología}.
+    \end{itemize}
+\end{solution}

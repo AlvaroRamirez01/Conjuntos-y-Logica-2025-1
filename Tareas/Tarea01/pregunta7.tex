@@ -1,0 +1,35 @@
+\begin{solution}
+P.D: Probar que $\psi, \neg \psi \vdash \varphi$ para cualquier fórmula $\varphi$.
+
+Suponemos que $\psi$ es verdadera.
+\[
+\psi \quad \text{(hipótesis)}
+\]
+
+Suponemos también que $\neg \psi$ es verdadera.
+\[
+\neg \psi \quad \text{(hipótesis)}
+\]
+
+Por definición de negación, $\neg \psi$ implica que $\psi \to \bot$ (donde $\bot$ denota contradicción o falsedad).
+\[
+\neg \psi \equiv \psi \to \bot
+\]
+
+Usamos Modus Ponens (MP) con $\psi$ y $\psi \to \bot$, lo que nos permite derivar $\bot$.
+\[
+\bot \quad \text{(MP aplicado a $\psi$ y $\psi \to \bot$)}
+\]
+
+Ahora, aplicamos la regla conocida como **explosión** (también llamada ex falso quodlibet), que nos dice que de una contradicción ($\bot$), podemos derivar cualquier fórmula, en este caso, $\varphi$.
+\[
+\varphi \quad \text{(ex falso quodlibet)}
+\]
+
+Concluimos que: De las hipótesis $\psi$ y $\neg \psi$, hemos derivado $\varphi$. Por lo tanto, se tiene que:
+\[
+\psi, \neg \psi \vdash \varphi
+\]
+
+Esto completa la demostración.
+\end{solution}

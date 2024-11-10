@@ -1,0 +1,142 @@
+\documentclass[11pt,answers]{exam}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{mathrsfs}
+\usepackage{array} % Para controlar el ancho de las celdas
+\usepackage{enumitem} % Para personalizar listas
+\usepackage{listings}% http://ctan.org/pkg/listings
+\usepackage{hyperref} % for hyperlinks
+\usepackage{amsmath} % para matemáticas mejoradas
+\usepackage{algorithm} % para escribir pseudocódigos
+\usepackage{algpseudocode} % para escribir pseudocódigos
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+% \usepackage{etoolbox}
+
+% \AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\par\noindent}
+
+\lstset{
+  basicstyle=\ttfamily,
+  mathescape
+}
+
+\graphicspath{{public/}}
+
+\setlength{\topmargin}{-.5in} \setlength{\textheight}{9.25in}
+\setlength{\oddsidemargin}{-0.5in} \setlength{\textwidth}{7.2in}
+
+
+\begin{document}
+\input{cover.tex}
+
+Considere para los siguientes ejercicios que $\mathscr{U}$ es el conjunto universo, \( A, B, C \subseteq \mathscr{U} \) y \( R, S \subseteq A \times A \) relaciones binarias sobre \( A \).
+
+\begin{enumerate}
+    \item Demuestra que:
+    \begin{itemize}
+        \item $A \setminus (B \setminus C) = (A \setminus B) \cup (A \cap C)$,
+        \item $A \setminus (A \cap B) = A \setminus B$,
+        \item $A \setminus B = A \text{ si y sólo si } A \cap B = \emptyset$,
+        \item $A \cap B = A \cup B \text{ si y sólo si } A = B$,
+        \item $A \setminus (B \setminus C) = (A \setminus B) \setminus C \text{ si y sólo si } A \cap C = \emptyset$.
+    \end{itemize}
+
+    \input{Tarea02/pregunta1}
+
+    \item Demuestra que:
+    \begin{itemize}
+        \item $\mathscr{P}(A) \subseteq \mathscr{P}(B) \text{ si y sólo si } A \subseteq B$,
+        \item $\mathscr{P}(A \cap B) = \mathscr{P}(A) \cap \mathscr{P}(B)$.
+        \item ¿Es cierto que \( \mathscr{P}(A \setminus B) = \mathscr{P}(A) \setminus \mathscr{P}(B) \)? En caso negativo, da condiciones sobre \( A \) y \( B \) para que se cumpla la igualdad anterior.
+    \end{itemize}
+
+    \input{Tarea02/Pregunta2}
+    
+    \item Calcula: \(\bigcap \{X \subseteq \mathscr{U} \mid X \in T\} \quad \text{y} \quad \bigcup \{X \subseteq \mathscr{U} \mid X \in T\}\)
+    para los siguientes casos:
+    \begin{itemize}
+        \item \( T = \{\{1, 2\}, \{2, 3\}, \{1, 3\}\} \),
+        \item \( T = \mathscr{P}(A) \).
+    \end{itemize}
+
+    \input{Tarea02/Pregunta3}
+
+    \item Sean \( \mathscr{F} \) y \( \mathscr{G} \) familias no vacías de subconjuntos de \( \mathscr{U} \). Demuestra que si \( \mathscr{F} \subseteq \mathscr{G} \), entonces:
+    \(\bigcup \mathscr{F} \subseteq \bigcup \mathscr{G}.\)
+
+    \input{Tarea02/Pregunta4}
+
+    \item Sea \( \mathscr{F} \) una familia no vacía de subconjuntos de \( \mathscr{U} \). Demuestra que:
+    \[
+    \left( \bigcap_{X \in \mathscr{F}} X \right)^c = \bigcup_{X \in \mathscr{F}} X^c.
+    \]
+
+    \input{Tarea02/Pregunta5}
+    
+    \item Demuestra que:
+    \begin{itemize}
+        \item $A \times (B \cup C) = (A \times B) \cup (A \times C)$.
+        \item $(A \cap B) \times C = (A \times C) \cap (B \times C)$.
+        \item $(A \times B)^c = (A^c \times B) \cup (A \times B^c) \cup (A^c \times B^c)$.
+    \end{itemize}
+        
+    \input{Tarea02/Pregunta6}
+
+    \item Define 6 relaciones sobre \( A = \{1, 2\} \).
+
+    \input{Tarea02/Pregunta7}
+
+    \item Describe la relación de equivalencia sobre \( A = \{1, 2, 3, 4, 5\} \) determinada por la partición \( \mathscr{F} = \{\{1, 3\}, \{2, 4\}, \{5\}\} \).
+
+    \input{Tarea02/Pregunta8}
+
+    \item Considera que \( A \) es un conjunto de 7 elementos y que \( R \) y \( S \) son relaciones de equivalencia. Si \( R \) induce 7 clases de equivalencia y \( S \) una, ¿qué relaciones son \( R \) y \( S \)?
+
+    \input{Tarea02/Pregunta9}
+
+    \item Determina si en cada caso la relación definida es de equivalencia. En tal caso, describe su partición inducida.
+    \begin{itemize}
+        \item \( n R m \) en \( \mathbb{Z} \) si \( nm \geq 0 \),
+        \item \( a R b \) en \( \mathbb{Z} \) si \( a + b \) es par,
+        \item \( a R b \) en \( \mathbb{Z} \) si \( a + b \) es impar,
+        \item \( a R b \) en \( \mathbb{Z} \) si \( a^2 + a = b^2 + b \),
+        \item \( x R y \) en \( \mathbb{R} \) si \( |x| = |y| \),
+        \item \( x R y \) en \( \mathbb{R} \) si \( x^2 + y^2 = 4 \),
+        \item \( (x, y) R (x', y') \) en \( \mathbb{R}^2 \) si \( y = y' \),
+        \item \( x R y \) en \( \mathbb{R} \) si \( |x - y| \leq 4 \),
+        \item Considera \( M \) el conjunto de todos los meses de este año. \( a R b \) en \( M \) si \( a \) y \( b \) comienzan el mismo día de la semana,
+        \item \( a R b \) en \( \mathbb{Z} \) si \( a = b \) o \( a + b = 3 \).
+    \end{itemize}
+
+    \input{Tarea02/Pregunta10}
+
+    \item Supón que \( R \) y \( S \) son relaciones de equivalencia. Demuestra que si \( A/R = A/S \), entonces \( R = S \).
+
+    \input{Tarea02/Pregunta11}
+
+    \item Demuestra que las siguientes relaciones son órdenes parciales, dibuja su diagrama de Hasse e identifica sus elementos mínimos, máximos, menores y mayores.
+    \begin{enumerate}
+        \item La divisibilidad de los naturales,
+        \item El menor igual de los enteros,
+        \item Si \( A = \{1, 2, 3, 4\} \), la contención sobre los subconjuntos no vacíos de \( A \),
+        \item Si \( A = \{1, 2, 3, 4\} \), la contención sobre los subconjuntos propios de \( A \).
+    \end{enumerate}
+
+    \input{Tarea02/Pregunta12}
+    
+    
+\end{enumerate}
+
+\end{document}

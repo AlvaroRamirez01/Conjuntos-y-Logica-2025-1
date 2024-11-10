@@ -1,0 +1,38 @@
+\begin{solution}
+    
+    $\Rightarrow$ Probar que \( \left( \bigcap_{X \in \mathscr{F}} X \right)^c \subseteq \bigcup_{X \in \mathscr{F}} X^c \)
+    
+    Supongamos que \( x \in \left( \bigcap_{X \in \mathscr{F}} X \right)^c \). Esto significa que \( x \notin \bigcap_{X \in \mathscr{F}} X \), es decir, \( x \) \textbf{no} pertenece a todos los conjuntos \( X \in \mathscr{F} \). Por lo tanto, debe existir al menos un conjunto \( X_0 \in \mathscr{F} \) tal que \( x \notin X_0 \), lo que implica que \( x \in X_0^c \).
+    
+    Dado que \( x \in X_0^c \), tenemos que \( x \in \bigcup_{X \in \mathscr{F}} X^c \).
+    
+    Esto demuestra que:
+    \[
+    \left( \bigcap_{X \in \mathscr{F}} X \right)^c \subseteq \bigcup_{X \in \mathscr{F}} X^c
+    \]
+    
+    $\Leftarrow$ Probar que \( \bigcup_{X \in \mathscr{F}} X^c \subseteq \left( \bigcap_{X \in \mathscr{F}} X \right)^c \)
+    
+    Supongamos que \( x \in \bigcup_{X \in \mathscr{F}} X^c \). Esto significa que existe al menos un conjunto \( X_0 \in \mathscr{F} \) tal que \( x \in X_0^c \), es decir, \( x \notin X_0 \).
+    
+    Si \( x \notin X_0 \), entonces \( x \notin \bigcap_{X \in \mathscr{F}} X \), porque la intersección \( \bigcap_{X \in \mathscr{F}} X \) requiere que \( x \) esté en todos los conjuntos de \( \mathscr{F} \), y sabemos que \( x \) no pertenece a \( X_0 \).
+    
+    Por lo tanto, \( x \in \left( \bigcap_{X \in \mathscr{F}} X \right)^c \).
+    
+    Esto demuestra que:
+    \[
+    \bigcup_{X \in \mathscr{F}} X^c \subseteq \left( \bigcap_{X \in \mathscr{F}} X \right)^c
+    \]
+    
+    Conclusión
+    
+    Dado que hemos demostrado la doble contención:
+    \[
+    \left( \bigcap_{X \in \mathscr{F}} X \right)^c \subseteq \bigcup_{X \in \mathscr{F}} X^c \quad \text{y} \quad \bigcup_{X \in \mathscr{F}} X^c \subseteq \left( \bigcap_{X \in \mathscr{F}} X \right)^c
+    \]
+    podemos concluir que:
+    \[
+    \left( \bigcap_{X \in \mathscr{F}} X \right)^c = \bigcup_{X \in \mathscr{F}} X^c
+    \] 
+    
+\end{solution}

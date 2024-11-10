@@ -1,0 +1,39 @@
+\begin{solution}
+    \begin{enumerate}
+    \item \textbf{El orden en el conjunto de los números racionales} \\
+    Utilizamos una relación binaria \( < \) que representa el orden en los números racionales, denotados por \( \mathbb{Q} \). La fórmula en lógica de primer orden es:
+    \[
+    \forall x, y, z \in \mathbb{Q}, (x < y \land y < z \rightarrow x < z) \land (x < y \rightarrow \neg(y < x))
+    \]
+
+    \item \textbf{Que una función sea monótona} \\
+    Sea \( f: A \rightarrow B \) una función. La monotonía de una función se puede expresar como:
+    \[
+    \forall x, y \in A, (x \leq y \rightarrow f(x) \leq f(y))
+    \]
+
+    \item \textbf{Que una relación sea de equivalencia} \\
+    Sea \( R \) una relación sobre un conjunto \( A \). La relación \( R \) es de equivalencia si es reflexiva, simétrica y transitiva:
+    \[
+    \text{Reflexiva:} \quad \forall x \in A, R(x, x)
+    \]
+    \[
+    \text{Simétrica:} \quad \forall x, y \in A, (R(x, y) \rightarrow R(y, x))
+    \]
+    \[
+    \text{Transitiva:} \quad \forall x, y, z \in A, (R(x, y) \land R(y, z) \rightarrow R(x, z))
+    \]
+
+    \item \textbf{Tener exactamente tres elementos} \\
+    Sea \( A \) un conjunto. Para expresar que \( A \) tiene exactamente tres elementos:
+    \[
+    \exists x, y, z \in A, (x \neq y \land x \neq z \land y \neq z \land \forall w \in A, (w = x \lor w = y \lor w = z))
+    \]
+
+    \item \textbf{Nadie en la clase de conjuntos es más inteligente que todos en la clase de lógica} \\
+    Supongamos que \( C \) es la clase de conjuntos, \( L \) es la clase de lógica, y \( I(x, y) \) indica que \( x \) es más inteligente que \( y \). La fórmula es:
+    \[
+    \forall x \in C, \exists y \in L, \neg I(x, y)
+    \]
+\end{enumerate}
+\end{solution}

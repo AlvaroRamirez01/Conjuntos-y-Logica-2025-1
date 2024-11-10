@@ -1,0 +1,38 @@
+\begin{solution}
+    P.D: \( A/R = A/S \) entonces $R=S$.
+    
+    $\Rightarrow$ Demostrar que \( R \subseteq S \)
+    
+    Queremos probar que si \( (a, b) \in R \), entonces \( (a, b) \in S \).
+    
+    Supongamos que \( (a, b) \in R \), lo que significa que \( a \) y \( b \) pertenecen a la misma clase de equivalencia bajo \( R \), es decir, \( b \in [a]_R \). Dado que sabemos que \( A/R = A/S \), las clases de equivalencia de \( R \) y \( S \) son iguales. Por lo tanto:
+    \[
+    [a]_R = [a]_S
+    \]
+    Esto implica que \( b \in [a]_S \), lo que significa que \( (a, b) \in S \).
+    
+    Hemos demostrado que si \( (a, b) \in R \), entonces \( (a, b) \in S \), lo que implica que \( R \subseteq S \).
+    
+    $\Leftarrow$ Demostrar que \( S \subseteq R \)
+    
+    Ahora queremos probar que si \( (a, b) \in S \), entonces \( (a, b) \in R \).
+    
+    Supongamos que \( (a, b) \in S \), lo que significa que \( b \in [a]_S \). Dado que \( A/R = A/S \), las clases de equivalencia bajo \( S \) y \( R \) son iguales, es decir:
+    \[
+    [a]_S = [a]_R
+    \]
+    Por lo tanto, \( b \in [a]_R \), lo que implica que \( (a, b) \in R \).
+    
+    Conclusión
+    Hemos demostrado que si \( (a, b) \in S \), entonces \( (a, b) \in R \), lo que implica que \( S \subseteq R \).
+    
+    Conclusión final
+    
+    Dado que hemos demostrado que \( R \subseteq S \) y \( S \subseteq R \), podemos concluir que \( R = S \).
+    
+    \[
+    R \subseteq S \quad \text{y} \quad S \subseteq R \implies R = S
+    \]
+    
+    Por lo tanto, si \( A/R = A/S \), entonces \( R = S \). \(\blacksquare\)
+\end{solution}

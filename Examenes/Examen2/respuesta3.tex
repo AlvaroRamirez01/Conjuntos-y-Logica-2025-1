@@ -1,0 +1,52 @@
+\begin{solution}
+\textbf{P.D:} que \( R \) es una relación de equivalencia:
+
+La relación \( R \) en \( S^1 \) está definida como sigue:
+\[
+P R Q \iff P = Q \text{ o } P \text{ y } Q \text{ son diametralmente opuestos}.
+\]
+Debemos demostrar que esta relación cumple con las tres propiedades de una relación de equivalencia: \textbf{reflexiva}, \textbf{simétrica} y \textbf{transitiva}.
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Reflexividad:}
+    Debemos probar que \( P R P \) para cualquier \( P \in S^1 \).
+    
+    Esto es cierto porque, por definición, \( P = P \), por lo tanto, la relación es reflexiva.
+    
+    \item \textbf{Simetría:}
+    Debemos probar que si \( P R Q \), entonces \( Q R P \).
+    
+    Si \( P R Q \), entonces \( P = Q \) o \( P \) y \( Q \) son diametralmente opuestos. Si \( P = Q \), entonces \( Q = P \) y la simetría se cumple. Si \( P \) y \( Q \) son diametralmente opuestos, entonces \( Q \) también es diametralmente opuesto a \( P \), lo que implica que \( Q R P \). Por lo tanto, la relación es simétrica.
+    
+    \item \textbf{Transitividad:}
+    Debemos probar que si \( P R Q \) y \( Q R R \), entonces \( P R R \).
+    
+    Examinamos dos casos:
+    
+    \begin{itemize}
+        \item Si \( P = Q \) y \( Q = R \), entonces claramente \( P = R \), y por lo tanto \( P R R \).
+        \item Si \( P \) y \( Q \) son diametralmente opuestos, y \( Q \) y \( R \) también son diametralmente opuestos, entonces necesariamente \( P = R \), porque los puntos diametralmente opuestos son únicos en \( S^1 \).
+    \end{itemize}
+    
+    Por lo tanto, la relación es transitiva.
+\end{enumerate}
+
+\textbf{Conclusión:}
+Como la relación \( R \) es reflexiva, simétrica y transitiva, podemos concluir que \( R \) es una \textbf{relación de equivalencia} en \( S^1 \).
+
+\textbf{Conjunto cociente:}
+
+El conjunto cociente bajo la relación \( R \) consiste en las clases de equivalencia de puntos en \( S^1 \). Estas clases de equivalencia agrupan los puntos que son iguales o diametralmente opuestos.
+
+Visualmente, en la circunferencia unitaria \( S^1 \), cada punto \( P \) en la circunferencia está emparejado con su punto diametralmente opuesto \( Q \). Cada clase de equivalencia tiene dos elementos:
+\[
+[P] = \{P, Q\}
+\]
+donde \( P \) y \( Q \) son puntos diametralmente opuestos en \( S^1 \).
+
+\textbf{Descripción geométrica del conjunto cociente:}
+
+El conjunto cociente \( S^1 / R \) puede visualizarse como un \textbf{semicírculo}. Al identificar cada punto en \( S^1 \) con su diametralmente opuesto, solo necesitamos considerar los puntos en un semicírculo (por ejemplo, los puntos entre \( 0 \) y \( \pi \) en coordenadas angulares), ya que cada punto tiene un ``gemelo'' diametralmente opuesto en la otra mitad del círculo.
+
+El conjunto cociente \( S^1 / R \) es equivalente a una copia de la \textbf{mitad superior} de la circunferencia unitaria, ya que estamos identificando puntos opuestos en \( S^1 \).
+\end{solution}

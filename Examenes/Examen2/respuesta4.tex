@@ -1,0 +1,51 @@
+\begin{solution}
+\textbf{P.D:} que \( S \) es un orden para \( A/R \):
+
+La relación \( S \) en \( A/R \) está definida de la siguiente manera:
+
+\[
+[a]_R S [b]_R \iff \exists x \in [a]_R, \, y \in [b]_R \text{ tales que } x \rightarrow y \text{ es una tautología}.
+\]
+
+Para demostrar que \( S \) es un orden, debemos verificar que cumple las tres propiedades que definen un \textbf{orden parcial}: \textbf{reflexividad}, \textbf{antisimetría} y \textbf{transitividad}.
+
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Reflexividad:}
+
+Queremos probar que \( [a]_R S [a]_R \) para cualquier \( [a]_R \in A/R \).
+
+Por definición de \( S \), esto significa que existe \( x \in [a]_R \) tal que \( x \rightarrow x \) es una tautología. Esto es cierto, ya que \( x \rightarrow x \) es siempre una tautología, independientemente de \( x \). Por lo tanto, \( [a]_R S [a]_R \), y la relación \( S \) es reflexiva.
+
+\item \textbf{Antisimetría:}
+
+Debemos probar que si \( [a]_R S [b]_R \) y \( [b]_R S [a]_R \), entonces \( [a]_R = [b]_R \).
+
+Por definición de \( S \), si \( [a]_R S [b]_R \), existen \( x \in [a]_R \) y \( y \in [b]_R \) tales que \( x \rightarrow y \) es una tautología. De igual forma, si \( [b]_R S [a]_R \), existen \( y \in [b]_R \) y \( x \in [a]_R \) tales que \( y \rightarrow x \) es una tautología. 
+
+Ahora, si \( x \rightarrow y \) y \( y \rightarrow x \) son ambas tautologías, por definición de equivalencia lógica, esto implica que \( x \leftrightarrow y \) es una tautología. Como \( x \in [a]_R \) y \( y \in [b]_R \), esto significa que \( [a]_R = [b]_R \). Por lo tanto, la relación \( S \) es antisimétrica.
+
+\item \textbf{Transitividad:}
+
+Debemos probar que si \( [a]_R S [b]_R \) y \( [b]_R S [c]_R \), entonces \( [a]_R S [c]_R \).
+
+Por definición, si \( [a]_R S [b]_R \), existen \( x \in [a]_R \) y \( y \in [b]_R \) tales que \( x \rightarrow y \) es una tautología. Además, si \( [b]_R S [c]_R \), existen \( y' \in [b]_R \) y \( z \in [c]_R \) tales que \( y' \rightarrow z \) es una tautología. Dado que \( y \in [b]_R \) y \( y' \in [b]_R \), tenemos que \( y \leftrightarrow y' \) es una tautología, lo que implica que \( x \rightarrow z \) es una tautología.
+
+Por lo tanto, \( [a]_R S [c]_R \), y la relación \( S \) es transitiva.
+\end{enumerate}
+
+\textbf{Conclusión:}
+
+Dado que la relación \( S \) es reflexiva, antisimétrica y transitiva, podemos concluir que \( S \) es un \textbf{orden parcial} sobre \( A/R \).
+
+\textbf{Elemento mayor y menor en el orden:}
+
+En un orden parcial, el \textbf{elemento mayor} es aquel que está relacionado con todos los demás elementos, y el \textbf{elemento menor} es aquel que está relacionado por todos los demás elementos. En este caso, necesitamos identificar los elementos correspondientes en términos de las tautologías.
+
+\begin{itemize}
+    \item El \textbf{elemento mayor} es la clase de equivalencia de la \textbf{tautología}. Esto se debe a que para cualquier fórmula \( a \), \( \top \rightarrow a \) es siempre una tautología. Por lo tanto, la clase de equivalencia \( [\top]_R \) (donde \( \top \) es una tautología) es el mayor elemento.
+  
+    \item El \textbf{elemento menor} es la clase de equivalencia de la \textbf{contradicción}. Para cualquier fórmula \( a \), \( a \rightarrow \bot \) (donde \( \bot \) es una contradicción) es siempre una tautología. Esto significa que la clase de equivalencia \( [\bot]_R \) (donde \( \bot \) es una contradicción) es el menor elemento.
+\end{itemize}
+
+Por lo tanto, el orden definido por \( S \) tiene un elemento mayor \( [\top]_R \) y un elemento menor \( [\bot]_R \).
+\end{solution}

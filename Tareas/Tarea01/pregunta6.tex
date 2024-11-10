@@ -1,0 +1,28 @@
+\begin{solution}
+Sean $L$ un lenguaje formal, $\mathscr{R}$ una colección de reglas de inferencia, $\Gamma$ una colección de fórmulas y $A$ es una fórmula. Demuestra que las siguientes condiciones son equivalentes:
+    \begin{enumerate}
+        \item $\Gamma$ es una teoría (formal).
+        \item $\Gamma \vdash A$ si y sólo si $A \in \Gamma$.
+    \end{enumerate}
+
+\textbf{Demostración:}
+
+Queremos demostrar que las dos condiciones son equivalentes.
+
+\begin{itemize}
+    \item[$\Rightarrow$] Supongamos que $\Gamma$ es una teoría formal. Por la definición de teoría, sabemos que $\Gamma$ es deductivamente cerrada, es decir, para toda fórmula $A$, si $\Gamma \vdash A$, entonces $A \in \Gamma$. Esto implica que, si $A$ es deducible a partir de $\Gamma$, entonces $A$ ya pertenece a $\Gamma$, lo cual muestra la implicación directa de que $\Gamma \vdash A$ implica $A \in \Gamma$.
+
+    Además, por definición de teoría, si una fórmula $A$ pertenece a $\Gamma$, entonces también es deducible de $\Gamma$ usando las reglas de inferencia $\mathscr{R}$, es decir, $A \in \Gamma$ implica $\Gamma \vdash A$. Esto demuestra la implicación inversa, es decir, si $A \in \Gamma$, entonces $\Gamma \vdash A$.
+
+    Por lo tanto, hemos demostrado que $\Gamma \vdash A$ si y sólo si $A \in \Gamma$.
+
+    \item[$\Leftarrow$] Ahora supongamos que $\Gamma$ cumple la condición de que $\Gamma \vdash A$ si y sólo si $A \in \Gamma$. Queremos demostrar que $\Gamma$ es deductivamente cerrada, es decir, que $\Gamma$ es una teoría.
+
+    Para ello, debemos verificar que si $\Gamma \vdash A$, entonces $A \in \Gamma$. Pero esta condición ya está garantizada por nuestra suposición, ya que hemos supuesto que $\Gamma \vdash A$ si y sólo si $A \in \Gamma$. Por lo tanto, $\Gamma$ es deductivamente cerrada, lo que significa que $\Gamma$ es una teoría formal.
+
+    Esto demuestra que si $\Gamma \vdash A$ si y sólo si $A \in \Gamma$, entonces $\Gamma$ es una teoría formal.
+\end{itemize}
+
+En conclusión, las dos condiciones son equivalentes. \qed
+
+\end{solution}

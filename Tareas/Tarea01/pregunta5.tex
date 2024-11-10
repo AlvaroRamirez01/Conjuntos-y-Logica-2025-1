@@ -1,0 +1,39 @@
+\begin{solution}
+\textbf{Demostración:}
+
+Sea $\overline{X}$ el conjunto de todas las consecuencias lógicas de una colección $X$ de fórmulas, es decir, 
+\[
+\overline{X} = \{ \varphi \mid \Gamma \vdash \varphi \}.
+\]
+Queremos demostrar que 
+\[
+\overline{\Gamma \cap \Delta} \subseteq \overline{\Gamma} \cap \overline{\Delta}.
+\]
+
+Supongamos que $\varphi \in \overline{\Gamma \cap \Delta}$. Esto significa que existe una deducción de $\varphi$ a partir de las fórmulas en $\Gamma \cap \Delta$ utilizando las reglas de inferencia de $\mathscr{R}$. Es decir,
+\[
+\Gamma \cap \Delta \vdash \varphi.
+\]
+Dado que $\Gamma \cap \Delta \subseteq \Gamma$, esto implica que también podemos deducir $\varphi$ a partir de las fórmulas en $\Gamma$, es decir,
+\[
+\Gamma \vdash \varphi,
+\]
+lo que significa que $\varphi \in \overline{\Gamma}$.
+
+De manera similar, dado que $\Gamma \cap \Delta \subseteq \Delta$, también podemos deducir $\varphi$ a partir de las fórmulas en $\Delta$, es decir,
+\[
+\Delta \vdash \varphi,
+\]
+lo que significa que $\varphi \in \overline{\Delta}$.
+
+Por lo tanto, tenemos que $\varphi \in \overline{\Gamma}$ y $\varphi \in \overline{\Delta}$, lo que implica que 
+\[
+\varphi \in \overline{\Gamma} \cap \overline{\Delta}.
+\]
+En consecuencia, hemos demostrado que 
+\[
+\overline{\Gamma \cap \Delta} \subseteq \overline{\Gamma} \cap \overline{\Delta}.
+\]
+\qed
+
+\end{solution}

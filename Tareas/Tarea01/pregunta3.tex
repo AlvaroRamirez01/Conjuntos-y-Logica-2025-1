@@ -1,0 +1,34 @@
+\begin{solution}
+    \begin{itemize}
+    \item El cero es el menor de todos los números.
+    \begin{itemize}
+        \item Traducción 1: \( \forall x (N(x) \rightarrow c_0 \leq x) \)
+    \end{itemize}
+    
+    \item Si cualquier número es interesante, entonces el cero es interesante.
+    \begin{itemize}
+        \item Traducción: \( (\forall x (N(x) \rightarrow I(x))) \rightarrow I(c_0) \)
+    \end{itemize}
+    
+    \item Ningún número es menor que el cero.
+    \begin{itemize}
+        \item Traducción: \( \forall x (N(x) \rightarrow \neg <(x, c_0)) \)
+    \end{itemize}
+    
+    \item Cualquier número no interesante con la propiedad de que todo número menor que dicho número sea interesante vuelve a este número interesante.
+    \begin{itemize}
+        \item Traducción: \( \forall x ((N(x) \land \neg I(x) \land \forall y (<(y, x) \rightarrow I(y))) \rightarrow I(x)) \)
+    \end{itemize}
+    
+    \item No hay un número tal que todos los demás números sean menores que éste.
+    \begin{itemize}
+        \item Traducción: \( \neg \exists x (N(x) \land \forall y (N(y) \rightarrow <(y, x))) \)
+    \end{itemize}
+    
+    \item No hay un número tal que ningún otro número sea menor que él.
+    \begin{itemize}
+        \item Traducción: \( \neg \exists x (N(x) \land \forall y (N(y) \rightarrow \neg <(y, x))) \)
+    \end{itemize}
+\end{itemize}
+
+\end{solution}

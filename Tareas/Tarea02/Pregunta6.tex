@@ -1,0 +1,81 @@
+\begin{solution}
+    \begin{itemize}
+        \item $A \times (B \cup C) = (A \times B) \cup (A \times C)$.
+
+        \textbf{Demostración:}
+
+        \textbf{Lado izquierdo}: El producto cartesiano \( A \times (B \cup C) \) es el conjunto de todos los pares \( (a, x) \) donde \( a \in A \) y \( x \in B \cup C \), es decir:
+          \[
+          A \times (B \cup C) = \{(a, x) \mid a \in A, x \in B \cup C\}
+          \]
+          Como \( x \in B \cup C \), esto significa que \( x \in B \) o \( x \in C \), por lo que:
+          \[
+          A \times (B \cup C) = \{(a, x) \mid a \in A \text{ y } (x \in B \text{ o } x \in C)\}
+          \]
+        
+        \textbf{Lado derecho}: El conjunto \( (A \times B) \cup (A \times C) \) es la unión de los pares en \( A \times B \) con los pares en \( A \times C \), es decir:
+          \[
+          (A \times B) \cup (A \times C) = \{(a, x) \mid (a \in A \text{ y } x \in B) \text{ o } (a \in A \text{ y } x \in C)\}
+          \]
+          Esto también representa el conjunto de todos los pares \( (a, x) \) donde \( a \in A \) y \( x \in B \cup C \).
+        
+        Como ambos lados describen los mismos elementos, tenemos que:
+        \[
+        A \times (B \cup C) = (A \times B) \cup (A \times C)
+        \]
+        \item $(A \cap B) \times C = (A \times C) \cap (B \times C)$.
+
+        \textbf{Demostración:}
+        
+        \textbf{Lado izquierdo:} El producto cartesiano \( (A \cap B) \times C \) es el conjunto de todos los pares \( (x, y) \) donde \( x \in A \cap B \) y \( y \in C \), es decir:
+          \[
+          (A \cap B) \times C = \{(x, y) \mid x \in A \cap B, y \in C\}
+          \]
+          Dado que \( x \in A \cap B \), esto significa que \( x \in A \) y \( x \in B \). Entonces podemos reescribirlo como:
+          \[
+          (A \cap B) \times C = \{(x, y) \mid x \in A, x \in B, y \in C\}
+          \]
+        
+        \textbf{Lado derecho:} El conjunto \( (A \times C) \cap (B \times C) \) es la intersección de los pares en \( A \times C \) con los pares en \( B \times C \). Es decir:
+          \[
+          (A \times C) \cap (B \times C) = \{(x, y) \mid (x \in A \text{ y } y \in C) \text{ y } (x \in B \text{ y } y \in C)\}
+          \]
+          Esto implica que \( x \in A \cap B \) y \( y \in C \), lo que es equivalente a \( (A \cap B) \times C \).
+        
+        Por lo tanto, tenemos que:
+        \[
+        (A \cap B) \times C = (A \times C) \cap (B \times C)
+        \]
+        \item $(A \times B)^c = (A^c \times B) \cup (A \times B^c) \cup (A^c \times B^c)$.
+
+        \textbf{Demostración:}
+
+        (\textbf{Lado izquierdo:} El complemento de \( A \times B \), es decir, \( (A \times B)^c \), en el producto cartesiano \( \mathscr{U} \times \mathscr{V} \) (donde \( A \subseteq \mathscr{U} \) y \( B \subseteq \mathscr{V} \)) está dado por el conjunto de todos los pares \( (x, y) \) que **no** están en \( A \times B \), es decir:
+          \[
+          (A \times B)^c = \{(x, y) \mid (x, y) \notin A \times B\}
+          \]
+          Esto significa que \( x \notin A \) o \( y \notin B \). Lo podemos descomponer en tres posibilidades:
+          \begin{itemize}
+            \item \( x \notin A \) y \( y \in B \),
+            \item \( x \in A \) y \( y \notin B \),
+            \item \( x \notin A \) y \( y \notin B \).
+          \end{itemize}
+        
+          Entonces:
+          \[
+          (A \times B)^c = \{(x, y) \mid x \in A^c \text{ y } y \in B\} \cup \{(x, y) \mid x \in A \text{ y } y \in B^c\} \cup \{(x, y) \mid x \in A^c \text{ y } y \in B^c\}
+          \]
+        
+        (\textbf{Lado derecho}: El conjunto \( (A^c \times B) \cup (A \times B^c) \cup (A^c \times B^c) \) es la unión de:
+        \begin{itemize}
+            \item Pares \( (x, y) \) donde \( x \in A^c \) y \( y \in B \),
+            \item Pares \( (x, y) \) donde \( x \in A \) y \( y \in B^c \),
+            \item Pares \( (x, y) \) donde \( x \in A^c \) y \( y \in B^c \).
+        \end{itemize}
+        
+        Esto es exactamente la misma descripción del complemento de \( A \times B \). Por lo tanto:
+        \[
+        (A \times B)^c = (A^c \times B) \cup (A \times B^c) \cup (A^c \times B^c)
+        \]
+    \end{itemize}
+\end{solution}

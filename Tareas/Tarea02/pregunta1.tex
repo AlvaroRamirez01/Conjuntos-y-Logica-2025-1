@@ -1,0 +1,100 @@
+\begin{solution}
+    \begin{itemize}
+        \item $A \setminus (B \setminus C) = (A \setminus B) \cup (A \cap C)$.
+
+        \textbf{Demostración:}
+
+        \textbf{Lado izquierdo:} \( A \setminus (B \setminus C) \) representa los elementos que están en \( A \) pero no en \( B \setminus C \). Por definición:
+          \[
+          B \setminus C = \{x \in B \mid x \notin C\}
+          \]
+          Entonces:
+          \[
+          A \setminus (B \setminus C) = \{x \in A \mid x \notin B \text{ o } x \in C\}
+          \]
+        
+        \textbf{Lado derecho:} Ahora, consideremos el lado derecho:
+          \[
+          (A \setminus B) \cup (A \cap C) = \{x \in A \mid x \notin B\} \cup \{x \in A \mid x \in C\}
+          \]
+          Esto representa los elementos de \( A \) que no están en \( B \) o que están en \( C \), lo cual coincide con la descripción del lado izquierdo.
+        
+        Por lo tanto, tenemos que:
+        \[
+        A \setminus (B \setminus C) = (A \setminus B) \cup (A \cap C)
+        \]
+        \item $A \setminus (A \cap B) = A \setminus B$.
+
+        \textbf{Demostración:}
+
+        \textbf{Lado izquierdo:} El conjunto \( A \setminus (A \cap B) \) contiene los elementos de \( A \) que no están en \( A \cap B \), es decir:
+          \[
+          A \setminus (A \cap B) = \{x \in A \mid x \notin A \cap B\}
+          \]
+          Como \( x \notin A \cap B \) implica que \( x \notin B \), podemos reescribir esto como:
+          \[
+          A \setminus (A \cap B) = \{x \in A \mid x \notin B\}
+          \]
+        
+        \textbf{Lado derecho}: El conjunto \( A \setminus B \) es precisamente:
+          \[
+          A \setminus B = \{x \in A \mid x \notin B\}
+          \]
+        
+        Por lo tanto, los dos lados son iguales:
+        \[
+        A \setminus (A \cap B) = A \setminus B
+        \]
+        \item $A \setminus B = A \text{ si y sólo si } A \cap B = \emptyset$.
+
+        \textbf{Demostración:}
+        
+        \(\Rightarrow\): Supongamos que \( A \setminus B = A \). Esto significa que ningún elemento de \( A \) está en \( B \), es decir, \( A \cap B = \emptyset \).
+        
+        \(\Leftarrow\): Supongamos ahora que \( A \cap B = \emptyset \). Esto significa que no hay elementos en común entre \( A \) y \( B \). Por lo tanto, al quitar \( B \) de \( A \), no estamos quitando nada, es decir, \( A \setminus B = A \).
+        
+        Por lo tanto, hemos demostrado que:
+        \[
+        A \setminus B = A \iff A \cap B = \emptyset
+        \]
+        \item $A \cap B = A \cup B \text{ si y sólo si } A = B$.
+        
+        \textbf{Demostración:}
+        
+        \(\Rightarrow\): Supongamos que \( A \cap B = A \cup B \). Dado que la intersección es siempre un subconjunto de la unión, esto solo puede suceder si \( A = B \). Si \( A \) y \( B \) son diferentes, \( A \cap B \) sería estrictamente menor que \( A \cup B \), lo que no es posible en este caso.
+        
+        \(\Leftarrow\): Si \( A = B \), entonces:
+          \[
+          A \cap B = A \cap A = A
+          \]
+          y:
+          \[
+          A \cup B = A \cup A = A
+          \]
+          Por lo tanto, \( A \cap B = A \cup B \).
+        
+        Por lo tanto, tenemos que:
+        \[
+        A \cap B = A \cup B \iff A = B
+        \]
+        
+        
+        \item $A \setminus (B \setminus C) = (A \setminus B) \setminus C \text{ si y sólo si } A \cap C = \emptyset$.
+        
+        \textbf{Demostración:}
+
+        \(\Rightarrow\): Supongamos que \( A \setminus (B \setminus C) = (A \setminus B) \setminus C \). Queremos demostrar que esto implica \( A \cap C = \emptyset \). 
+        
+        Si \( A \cap C \neq \emptyset \), entonces existen elementos en \( A \) que también están en \( C \), lo que afectaría la forma en que los elementos se eliminan en ambas expresiones, y las dos expresiones no serían iguales. Por lo tanto, \( A \cap C = \emptyset \).
+        
+        \(\Leftarrow\): Supongamos que \( A \cap C = \emptyset \). Esto significa que no hay elementos en común entre \( A \) y \( C \). Entonces, el conjunto \( A \setminus (B \setminus C) \) y \( (A \setminus B) \setminus C \) eliminan los mismos elementos, lo que implica que:
+          \[
+          A \setminus (B \setminus C) = (A \setminus B) \setminus C
+          \]
+        
+        Por lo tanto, tenemos que:
+        \[
+        A \setminus (B \setminus C) = (A \setminus B) \setminus C \iff A \cap C = \emptyset
+        \]
+    \end{itemize}
+\end{solution}

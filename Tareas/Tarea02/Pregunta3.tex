@@ -1,0 +1,86 @@
+\begin{solution}
+    \begin{itemize}
+        \item \( T = \{\{1, 2\}, \{2, 3\}, \{1, 3\}\} \).
+        
+            Dado \( T = \{\{1, 2\}, \{2, 3\}, \{1, 3\}\} \), necesitamos calcular la \textbf{intersección} y la \textbf{unión} de los conjuntos en \( T \).
+            
+            \textbf{Intersección:}
+            
+            La intersección de los conjuntos en \( T \) es el conjunto de elementos que están en todos los subconjuntos de \( T \):
+            \[
+            \bigcap T = \{1, 2\} \cap \{2, 3\} \cap \{1, 3\}
+            \]
+            
+            Veamos las intersecciones paso a paso:
+            \[
+            \{1, 2\} \cap \{2, 3\} = \{2\}
+            \]
+            \[
+            \{2\} \cap \{1, 3\} = \emptyset
+            \]
+            
+            Por lo tanto:
+            \[
+            \bigcap T = \emptyset
+            \]
+            
+            \textbf{Unión:}
+            
+            La unión de los conjuntos en \( T \) es el conjunto de elementos que pertenecen a al menos uno de los subconjuntos de \( T \):
+            \[
+            \bigcup T = \{1, 2\} \cup \{2, 3\} \cup \{1, 3\}
+            \]
+            
+            Veamos las uniones paso a paso:
+            \[
+            \{1, 2\} \cup \{2, 3\} = \{1, 2, 3\}
+            \]
+            \[
+            \{1, 2, 3\} \cup \{1, 3\} = \{1, 2, 3\}
+            \]
+            
+            Por lo tanto:
+            \[
+            \bigcup T = \{1, 2, 3\}
+            \]
+            
+            Respuesta para \( T = \{\{1, 2\}, \{2, 3\}, \{1, 3\}\} \):
+            \[
+            \bigcap T = \emptyset
+            \]
+            \[
+            \bigcup T = \{1, 2, 3\}
+            \]
+        \item \( T = \mathscr{P}(A) \).
+
+        \( T = \mathscr{P}(A) \), donde \( \mathscr{P}(A) \) es la \textbf{familia de subconjuntos} de \( A \)
+
+        La familia \( \mathscr{P}(A) \) es el \textbf{conjunto potencia} de \( A \), es decir, el conjunto de todos los subconjuntos posibles de \( A \). Necesitamos calcular la intersección y la unión de todos los subconjuntos de \( A \).
+        
+        \textbf{Intersección:}
+        
+        La intersección de todos los subconjuntos de \( A \), es decir, la intersección de los elementos de \( \mathscr{P}(A) \), es el conjunto de elementos que están presentes en todos los subconjuntos de \( A \).
+        
+        \begin{itemize}
+            \item El único conjunto que está presente en \textbf{todos} los subconjuntos de \( A \) es el conjunto vacío \( \emptyset \). Por lo tanto:
+          \[
+          \bigcap \mathscr{P}(A) = \emptyset
+          \]
+        \end{itemize}
+        
+        \textbf{Unión:}
+        
+        La unión de todos los subconjuntos de \( A \), es decir, la unión de los elementos de \( \mathscr{P}(A) \), es el conjunto de todos los elementos que aparecen en al menos uno de los subconjuntos de \( A \). Dado que \( \mathscr{P}(A) \) contiene todos los subconjuntos de \( A \), la unión será el conjunto \( A \) mismo:
+        \[
+        \bigcup \mathscr{P}(A) = A
+        \]
+        
+        Respuesta para \( T = \mathscr{P}(A) \):
+        \[
+        \bigcap \mathscr{P}(A) = \emptyset
+        \]
+        \[
+        \bigcup \mathscr{P}(A) = A
+        \]
+    \end{itemize}
+\end{solution}

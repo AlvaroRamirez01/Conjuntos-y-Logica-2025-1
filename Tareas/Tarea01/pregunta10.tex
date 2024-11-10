@@ -1,0 +1,110 @@
+\begin{solution}
+    \textbf{Modelo para la primera colección de fórmulas:}
+
+Dado el conjunto de fórmulas:
+
+\begin{itemize}
+    \item $\forall x_1 (R(x_1, x_1))$
+    
+    \item $\forall x_1 \forall x_2 ((R(x_1, x_2) \land R(x_2, x_1)) \to (x_1 = x_2))$
+    
+    \item $\forall x_1 \forall x_2 \forall x_3 ((R(x_1, x_2) \land R(x_2, x_3)) \to R(x_1, x_3))$
+    
+    \item $\forall x_1 \forall x_2 (\neg (x_1 = x_2) \to (R(x_1, x_2) \lor R(x_2, x_1)))$
+    
+    \item $\forall x_1 \forall x_2 \forall x_3 (R(x_1, x_2) \to R(f(x_3, x_1), f(x_3, x_2)))$
+    
+    \item $\forall x_1 \forall x_2 \forall x_3 (R(x_1, x_2) \to R(f(x_1, x_3), f(x_2, x_3)))$
+\end{itemize}
+
+\textbf{Modelo propuesto:}
+\[
+\text{Universo: } \{1, 2\}
+\]
+\[
+R(x_1, x_2) = \left\{
+    \begin{array}{ll}
+        \text{verdadero} & \text{si } x_1 = x_2 \text{ o } (x_1 = 1 \text{ y } x_2 = 2) \text{ o } (x_1 = 2 \text{ y } x_2 = 1) \\
+        \text{falso} & \text{en otro caso.}
+    \end{array}
+\right.
+\]
+\[
+f(x_1, x_2) = x_1.
+\]
+
+Este modelo satisface todas las fórmulas porque:
+
+\begin{itemize}
+    \item \( R(x_1, x_1) \) es verdadero (reflexividad).
+    \item Si \( R(x_1, x_2) \land R(x_2, x_1) \), entonces \( x_1 = x_2 \), cumpliendo la condición de simetría e identidad.
+    \item La transitividad se cumple debido a las asignaciones de \( R \).
+    \item Si \( x_1 \neq x_2 \), entonces o bien \( R(x_1, x_2) \) o \( R(x_2, x_1) \) es verdadero.
+    \item Las fórmulas con la función \( f \) se cumplen debido a la definición de \( f \).
+
+\end{itemize}
+
+\textbf{Modelo para la segunda colección de fórmulas:}
+
+\begin{itemize}
+    \item $\exists x_1 (f(x_1) = x_1)$
+    
+    \item $\exists x_1 \neg (f(x_1) = x_1)$
+    
+    \item $\forall x_1 \forall x_2 (f(x_1) = f(x_2) \to (x_1 = x_2))$
+\end{itemize}
+
+\textbf{Modelo propuesto:}
+\[
+\text{Universo: } \{1, 2\}
+\]
+\[
+f(x_1) = \left\{
+    \begin{array}{ll}
+        1 & \text{si } x_1 = 1 \\
+        2 & \text{si } x_1 = 2
+    \end{array}
+\right.
+\]
+
+Este modelo satisface las fórmulas porque:
+
+\begin{itemize}
+    \item \( f(1) = 1 \), por lo que existe un \( x_1 \) tal que \( f(x_1) = x_1 \).
+    \item \( f(2) = 2 \), así que existe otro \( x_1 \) tal que \( f(x_1) \neq x_1 \).
+    \item Si \( f(x_1) = f(x_2) \), entonces necesariamente \( x_1 = x_2 \) debido a la inyectividad de \( f \).
+\end{itemize}
+
+
+\textbf{Modelo para la tercera colección de fórmulas:}
+
+\begin{itemize}
+    \item $\forall x_1 (f(f(x_1)) = x_1)$
+    
+    \item $\forall x_1 \neg (f(x_1) = x_1)$
+    
+    \item $\forall x_1 \forall x_2 (f(x_1) = f(x_2) \to (x_1 = x_2))$
+\end{itemize}
+
+\textbf{Modelo propuesto:}
+\[
+\text{Universo: } \{1, 2\}
+\]
+\[
+f(x_1) = \left\{
+    \begin{array}{ll}
+        2 & \text{si } x_1 = 1 \\
+        1 & \text{si } x_1 = 2
+    \end{array}
+\right.
+\]
+
+Este modelo satisface las fórmulas porque:
+
+\begin{itemize}
+    \item \( f(f(1)) = f(2) = 1 \) y \( f(f(2)) = f(1) = 2 \), cumpliendo \( \forall x_1 (f(f(x_1)) = x_1) \).
+    \item Ningún \( x_1 \) satisface \( f(x_1) = x_1 \), lo que hace verdadera la fórmula \( \forall x_1 \neg (f(x_1) = x_1) \).
+    \item La inyectividad de \( f \) se cumple, ya que \( f(x_1) = f(x_2) \) implica \( x_1 = x_2 \).
+\end{itemize}
+
+\end{solution}

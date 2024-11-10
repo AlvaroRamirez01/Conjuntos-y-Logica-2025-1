@@ -1,0 +1,44 @@
+\begin{solution}
+\begin{enumerate}
+    \item \textbf{Primera proposición:}
+   \[
+   \mathscr{P} \left( \bigcap_{X \in \mathscr{F}} X \right) = \bigcap_{X \in \mathscr{F}} \mathscr{P}(X)?
+   \]
+   \textbf{Interpretación:}
+
+   \( \mathscr{P}(A) \) es el conjunto potencia de \( A \), es decir, el conjunto de todos los subconjuntos de \( A \). La proposición está afirmando que el conjunto potencia de la intersección de todos los conjuntos en \( \mathscr{F} \) es igual a la intersección de los conjuntos potencia de los conjuntos en \( \mathscr{F} \).
+
+   \textbf{Análisis:}
+
+   Esto \textbf{seria cierto}. La razón es que el conjunto potencia de la intersección de una familia de conjuntos \( \mathscr{F} \) contiene los subconjuntos de la intersección, pero la intersección de los conjuntos potencia contiene los subconjuntos de cada conjunto individual en \( \mathscr{F} \), no necesariamente aquellos que están en la intersección. Vamos a sustentarlo con un ejemplo:
+
+   \begin{itemize}
+        \item Sean \( A = \{1, 2\} \) y \( B = \{2, 3\} \).
+        \item Entonces, \( A \cap B = \{2\} \), y \( \mathscr{P}(A \cap B) = \{ \emptyset, \{2\} \} \).
+        \item Por otro lado, \( \mathscr{P}(A) = \{ \emptyset, \{1\}, \{2\}, \{1, 2\} \} \) y \( \mathscr{P}(B) = \{ \emptyset, \{2\}, \{3\}, \{2, 3\} \} \), y su intersección es \( \mathscr{P}(A) \cap \mathscr{P}(B) = \{ \emptyset, \{2\} \} \).
+        \item En este caso, \( \mathscr{P}(A \cap B) = \mathscr{P}(A) \cap \mathscr{P}(B) \).
+   \end{itemize}
+
+   La igualdad puede ser verdadera en algunos casos especiales, pero no en general.
+
+    \item \textbf{Segunda proposición:}
+   \[
+   \mathscr{P} \left( \bigcup_{X \in \mathscr{F}} X \right) = \bigcup_{X \in \mathscr{F}} \mathscr{P}(X)?
+   \]
+   \textbf{Interpretación:}
+
+   Aquí se está afirmando que el conjunto potencia de la unión de todos los conjuntos en \( \mathscr{F} \) es igual a la unión de los conjuntos potencia de los conjuntos en \( \mathscr{F} \).
+
+   \textbf{Análisis:}
+
+   Esto \textbf{no es cierto}. El conjunto potencia de la unión contiene todos los subconjuntos de la unión, mientras que la unión de los conjuntos potencia solo contiene los subconjuntos que están en al menos uno de los conjuntos. Esta diferencia hace que la igualdad no se mantenga en general.
+
+   Un contraejemplo:
+   \begin{itemize}
+        \item Sean \( A = \{1\} \) y \( B = \{2\} \).
+        \item Entonces, \( A \cup B = \{1, 2\} \), y \( \mathscr{P}(A \cup B) = \{ \emptyset, \{1\}, \{2\}, \{1, 2\} \} \).
+        \item Por otro lado, \( \mathscr{P}(A) = \{ \emptyset, \{1\} \} \) y \( \mathscr{P}(B) = \{ \emptyset, \{2\} \} \), y su unión es \( \mathscr{P}(A) \cup \mathscr{P}(B) = \{ \emptyset, \{1\}, \{2\} \} \).
+        \item Aquí, \( \mathscr{P}(A \cup B) \neq \mathscr{P}(A) \cup \mathscr{P}(B) \), ya que \( \{1, 2\} \in \mathscr{P}(A \cup B) \), pero no está en la unión de \( \mathscr{P}(A) \) y \( \mathscr{P}(B) \).
+   \end{itemize}
+\end{enumerate}
+\end{solution}

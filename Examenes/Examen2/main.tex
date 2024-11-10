@@ -1,0 +1,71 @@
+\documentclass[11pt,answers]{exam}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{mathrsfs}
+\usepackage{array} % Para controlar el ancho de las celdas
+\usepackage{enumitem} % Para personalizar listas
+\usepackage{listings}% http://ctan.org/pkg/listings
+\usepackage{hyperref} % for hyperlinks
+\usepackage{amsmath} % para matemáticas mejoradas
+\usepackage{algorithm} % para escribir pseudocódigos
+\usepackage{algpseudocode} % para escribir pseudocódigos
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+% \usepackage{etoolbox}
+
+% \AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\par\noindent}
+
+\lstset{
+  basicstyle=\ttfamily,
+  mathescape
+}
+
+\graphicspath{{public/}}
+
+\setlength{\topmargin}{-.5in} \setlength{\textheight}{9.25in}
+\setlength{\oddsidemargin}{-0.5in} \setlength{\textwidth}{7.2in}
+
+
+\begin{document}
+\input{cover.tex}
+
+Expón detalladamente tus respuestas:
+
+\begin{enumerate}
+    \item Sean \( \mathscr{U} \) universo y \( \mathscr{F} \) una familia no vacía de subconjuntos de \( \mathscr{U} \). ¿Es cierto que 
+    \[
+    \mathscr{P} \left( \bigcap_{X \in \mathscr{F}} X \right) = \bigcap_{X \in \mathscr{F}} \mathscr{P}(X)?
+    \]
+    ¿Y que 
+    \[
+    \mathscr{P} \left( \bigcup_{X \in \mathscr{F}} X \right) = \bigcup_{X \in \mathscr{F}} \mathscr{P}(X)?
+    \]
+
+    \input{Examen2/respuesta1}
+    
+    \item En \( \mathbb{R}^2 \) definimos la relación: \( (a, b) R (c, d) \) si y sólo si \( a - c, b - d \in \mathbb{Z} \). Demuestra que esta relación es de equivalencia y calcula su conjunto cociente. (\textbf{Opcional:}) Intenta dibujar las clases de equivalencia respecto a \( R \).
+
+    \input{Examen2/respuesta2}
+    
+    \item En \( \mathbb{R}^2 \) denotamos la circunferencia unitaria por \( S^1 = \{(x, y) \in \mathbb{R}^2 \mid x^2 + y^2 = 1\} \). Definimos, en \( S^1 \), la relación \( P R Q \) si y sólo si \( P = Q \) o \( P \) y \( Q \) son diametralmente opuestos. Demuestra que esta relación es de equivalencia y calcula su conjunto cociente. (\textbf{Opcional:}) Intenta dibujar las clases de equivalencia respecto a \( R \).
+
+    \input{Examen2/respuesta3}
+
+    \item (\textbf{¡¡¡SuperExtra!!!:}) Sea \( A \) el conjunto de fórmulas de un lenguaje de primer orden. En clase vimos que la relación \( a R b \) si \( a \leftrightarrow b \) es una tautología es una relación de equivalencia. Ahora definimos en \( A/R \) la relación \( [a]_R S[b]_b \) si y sólo si existen representantes \( x \in [a]_R \), \( y \in [b]_R \) tales que \( x \rightarrow y \) es una tautología. Demuestre que \( S \) es un orden para \( A/R \). Además, este orden tiene un elemento mayor y uno menor, ¿cuáles son?
+
+    \input{Examen2/respuesta4}
+\end{enumerate}
+
+\end{document}

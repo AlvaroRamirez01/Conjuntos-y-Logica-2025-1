@@ -1,0 +1,169 @@
+\begin{solution}
+    \begin{enumerate}
+        \item La divisibilidad de los naturales.
+        
+        \textbf{Relación:}
+        Sea \( a, b \in \mathbb{N} \), decimos que \( a \leq b \) si \( a \) divide a \( b \) (denotado como \( a \mid b \)).
+        
+        \textbf{Propiedades de orden parcial:}
+        \begin{itemize}
+            \item Reflexividad: Todo número natural divide a sí mismo, es decir, \( a \mid a \) para todo \( a \in \mathbb{N} \).
+            \item Antisimetría: Si \( a \mid b \) y \( b \mid a \), entonces \( a = b \). Esto se sigue de la propiedad de divisibilidad.
+            \item Transitividad: Si \( a \mid b \) y \( b \mid c \), entonces \( a \mid c \). Esta es la transitividad de la divisibilidad.
+        \end{itemize}        
+        Por lo tanto, la divisibilidad es un orden parcial.
+        
+        \textbf{Diagrama de Hasse:}
+        Consideremos un conjunto pequeño de números naturales: \( \{1, 2, 4, 8, 16\} \).
+        
+        El diagrama de Hasse es:
+        \begin{verbatim}
+           16
+            |
+            8
+            |
+            4
+            |
+            2
+            |
+            1
+        \end{verbatim}
+        
+        \textbf{Elementos mínimos y máximos:}
+        \begin{itemize}
+            \item Mínimo: \( 1 \) es el elemento mínimo porque divide a todos los demás.
+            \item Máximo: \( 16 \) es el elemento máximo porque es divisible por todos los demás.
+        \end{itemize}
+        
+        \textbf{Menores y mayores:}
+        \begin{itemize}
+            \item \( 1 \) es menor que todos los demás.
+            \item \( 16 \) es mayor que todos los demás.
+            \item \( 4 \) es mayor que \( 2 \), y menor que \( 8 \) y \( 16 \).
+        \end{itemize}
+        
+        \item El menor igual de los enteros.
+
+        \textbf{Relación:}
+        Sea \( a, b \in \mathbb{Z} \), decimos que \( a \leq b \) si \( a \) es menor o igual que \( b \).
+        
+        \textbf{Propiedades de orden parcial:}
+        \begin{itemize}
+            \item Reflexividad: \( a \leq a \) para todo \( a \in \mathbb{Z} \).
+            \item Antisimetría: Si \( a \leq b \) y \( b \leq a \), entonces \( a = b \).
+            \item Transitividad: Si \( a \leq b \) y \( b \leq c \), entonces \( a \leq c \).
+        \end{itemize}
+        
+        Por lo tanto, el menor igual es un orden parcial.
+        
+        \textbf{Diagrama de Hasse:}
+        Consideremos un subconjunto de enteros \( \{-1, 0, 1, 2\} \).
+        
+        El diagrama de Hasse es:
+        \begin{verbatim}
+            2
+            |
+            1
+            |
+            0
+            |
+           -1
+        \end{verbatim}
+        
+        \textbf{Elementos mínimos y máximos:}
+        \begin{itemize}
+            \item Mínimo: \( -1 \) es el mínimo.
+            \item Máximo: \( 2 \) es el máximo.
+        \end{itemize}
+        
+        \textbf{Menores y mayores:}
+        \begin{itemize}
+            \item \( -1 \) es menor que todos los demás.
+            \item \( 2 \) es mayor que todos los demás.
+            \item \( 1 \) es mayor que \( 0 \) y menor que \( 2 \).
+        \end{itemize}
+        
+        \item Si \( A = \{1, 2, 3, 4\} \), la contención sobre los subconjuntos no vacíos de \( A \).
+
+        \textbf{Relación:}
+        La relación es la contención \( \subseteq \) entre los subconjuntos no vacíos de \( A \).
+        
+        Los subconjuntos no vacíos de \( A \) son:
+        \[
+        \{1\}, \{2\}, \{3\}, \{4\}, \{1, 2\}, \{1, 3\}, \{1, 4\}, \dots, \{1, 2, 3, 4\}
+        \]
+        
+        \textbf{Propiedades de orden parcial:}
+        \begin{itemize}
+            \item Reflexividad: Todo subconjunto está contenido en sí mismo.
+            \item Antisimetría: Si \( X \subseteq Y \) y \( Y \subseteq X \), entonces \( X = Y \).
+            \item Transitividad: Si \( X \subseteq Y \) y \( Y \subseteq Z \), entonces \( X \subseteq Z \).
+        \end{itemize}
+        
+        Por lo tanto, la contención es un \textbf{orden parcial}.
+        
+        % \textbf{Diagrama de Hasse:}
+        % Consideremos los subconjuntos \( \{1\}, \{1, 2\}, \{1, 2, 3\}, \{1, 2, 3, 4\} \).
+        
+        % El diagrama de Hasse es:
+        % \begin{verbatim}
+        %    {1, 2, 3, 4}
+        %       |
+        %    {1, 2, 3}
+        %       |
+        %    {1, 2} 
+        %       |
+        %    {1}
+        % \end{verbatim}
+        
+        \textbf{Elementos mínimos y máximos:}
+        \begin{itemize}
+            \item Mínimos: Los subconjuntos con un solo elemento, como \( \{1\}, \{2\}, \{3\}, \{4\} \).
+            \item Máximo: El conjunto \( A = \{1, 2, 3, 4\} \) es el máximo.
+        \end{itemize}
+        
+        \textbf{Menores y mayores:}
+        \( \{1\} \) es menor que \( \{1, 2\} \), que a su vez es menor que \( \{1, 2, 3\} \), y así sucesivamente.
+        
+        \item Si \( A = \{1, 2, 3, 4\} \), la contención sobre los subconjuntos propios de \( A \).
+
+        \textbf{Relación:}
+        La relación es la contención \( \subseteq \) entre los subconjuntos \textbf{propios} de \( A \), es decir, aquellos subconjuntos que no son iguales a \( A \).
+        
+        Los subconjuntos propios de \( A \) son:
+        \[
+        \{1\}, \{2\}, \{3\}, \{4\}, \{1, 2\}, \{1, 3\}, \{1, 4\}, \dots, \{1, 2, 3\}
+        \]
+        
+        \textbf{Propiedades de orden parcial:}
+        \begin{itemize}
+            \item Reflexividad: Todo subconjunto está contenido en sí mismo.
+            \item Antisimetría: Si \( X \subseteq Y \) y \( Y \subseteq X \), entonces \( X = Y \).
+            \item Transitividad: Si \( X \subseteq Y \) y \( Y \subseteq Z \), entonces \( X \subseteq Z \).
+        \end{itemize}
+        
+        Por lo tanto, la contención es un orden parcial.
+        
+        % \textbf{Diagrama de Hasse:}
+        % Consideremos los subconjuntos \( \{1\}, \{1, 2\}, \{1, 2, 3\} \).
+        
+        % El diagrama de Hasse es:
+        % \begin{verbatim}
+        %    {1, 2, 3}
+        %       |
+        %    {1, 2}
+        %       |
+        %    {1}
+        % \end{verbatim}
+        
+        \textbf{Elementos mínimos y máximos:}
+        \begin{itemize}
+            \item Mínimos: Los subconjuntos con un solo elemento, como \( \{1\}, \{2\}, \{3\}, \{4\} \).
+            \item Máximo: El conjunto \( \{1, 2, 3\} \) es el máximo subconjunto propio.
+        \end{itemize}
+        
+        \textbf{Menores y mayores:}
+        
+        Los subconjuntos más pequeños están contenidos en los más grandes.
+    \end{enumerate}
+\end{solution}

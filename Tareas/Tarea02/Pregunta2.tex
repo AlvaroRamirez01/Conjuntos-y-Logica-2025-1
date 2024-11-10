@@ -1,0 +1,56 @@
+\begin{solution}
+    \begin{itemize}
+        \item $\mathscr{P}(A) \subseteq \mathscr{P}(B) \text{ si y sólo si } A \subseteq B$.
+
+        \(\Rightarrow\) Supongamos que \( \mathscr{P}(A) \subseteq \mathscr{P}(B) \). Esto significa que todos los subconjuntos de \( A \) también son subconjuntos de \( B \), es decir, \( \forall X \in \mathscr{P}(A), X \in \mathscr{P}(B) \). En particular, \( A \in \mathscr{P}(A) \) (ya que \( A \) es un subconjunto de sí mismo), lo que implica que \( A \in \mathscr{P}(B) \), es decir, \( A \subseteq B \).
+
+        \(\Leftarrow\) Supongamos ahora que \( A \subseteq B \). Queremos probar que \( \mathscr{P}(A) \subseteq \mathscr{P}(B) \). Dado que \( A \subseteq B \), cualquier subconjunto de \( A \) también es subconjunto de \( B \). Por lo tanto, si \( X \in \mathscr{P}(A) \), entonces \( X \subseteq A \), y como \( A \subseteq B \), se sigue que \( X \subseteq B \), lo que implica que \( X \in \mathscr{P}(B) \). Por lo tanto, \( \mathscr{P}(A) \subseteq \mathscr{P}(B) \).
+        
+        \[
+        \boxed{\mathscr{P}(A) \subseteq \mathscr{P}(B) \iff A \subseteq B}
+        \]
+        
+        \item $\mathscr{P}(A \cap B) = \mathscr{P}(A) \cap \mathscr{P}(B)$.
+
+        \(\subseteq\) Supongamos que \( X \in \mathscr{P}(A \cap B) \). Entonces, \( X \subseteq A \cap B \). Por la definición de intersección, esto significa que \( X \subseteq A \) y \( X \subseteq B \), lo que implica que \( X \in \mathscr{P}(A) \) y \( X \in \mathscr{P}(B) \). Por lo tanto, \( X \in \mathscr{P}(A) \cap \mathscr{P}(B) \).
+
+        \(\supseteq\) Supongamos ahora que \( X \in \mathscr{P}(A) \cap \mathscr{P}(B) \). Esto significa que \( X \in \mathscr{P}(A) \) y \( X \in \mathscr{P}(B) \), es decir, \( X \subseteq A \) y \( X \subseteq B \). Por lo tanto, \( X \subseteq A \cap B \), lo que implica que \( X \in \mathscr{P}(A \cap B) \).
+        
+        \[
+        \boxed{\mathscr{P}(A \cap B) = \mathscr{P}(A) \cap \mathscr{P}(B)}
+        \]
+        
+        \item ¿Es cierto que \( \mathscr{P}(A \setminus B) = \mathscr{P}(A) \setminus \mathscr{P}(B) \)? En caso negativo, da condiciones sobre \( A \) y \( B \) para que se cumpla la igualdad anterior.
+
+        \textbf{Análisis:}
+
+        No es cierto en general. Para que la igualdad \( \mathscr{P}(A \setminus B) = \mathscr{P}(A) \setminus \mathscr{P}(B) \) sea válida, sería necesario que cualquier subconjunto de \( A \setminus B \) estuviera en \( \mathscr{P}(A) \setminus \mathscr{P}(B) \) y viceversa. Sin embargo, esto no siempre es cierto, como veremos con un contraejemplo.
+        
+        \textbf{Contraejemplo:}
+        
+        Consideremos \( A = \{1, 2\} \) y \( B = \{2\} \).
+        
+        \begin{itemize}
+            \item \( A \setminus B = \{1\} \).
+            \item \( \mathscr{P}(A \setminus B) = \mathscr{P}(\{1\}) = \{\emptyset, \{1\}\} \).
+        \end{itemize}
+        
+        Ahora calculemos \( \mathscr{P}(A) \setminus \mathscr{P}(B) \):
+        
+        \begin{itemize}
+            \item \( \mathscr{P}(A) = \{\emptyset, \{1\}, \{2\}, \{1, 2\}\} \).
+            \item \( \mathscr{P}(B) = \{\emptyset, \{2\}\} \).
+            \item \( \mathscr{P}(A) \setminus \mathscr{P}(B) = \{\{1\}, \{1, 2\}\} \).
+        \end{itemize}
+        
+        Claramente, \( \mathscr{P}(A \setminus B) = \{\emptyset, \{1\}\} \) \textbf{no es igual} a \( \mathscr{P}(A) \setminus \mathscr{P}(B) = \{\{1\}, \{1, 2\}\} \).
+        
+        \textbf{Condición para que la igualdad se cumpla:}
+        
+        La igualdad \( \mathscr{P}(A \setminus B) = \mathscr{P}(A) \setminus \mathscr{P}(B) \) \textbf{se cumple} si y solo si \( B \subseteq A \). Esto es porque, cuando \( B \subseteq A \), ningún subconjunto de \( A \setminus B \) puede estar en \( \mathscr{P}(B) \), y por lo tanto, la diferencia de subconjuntos se comporta de manera consistente.
+        
+        \[
+        \boxed{\mathscr{P}(A \setminus B) = \mathscr{P}(A) \setminus \mathscr{P}(B) \text{ si y sólo si } B \subseteq A}
+        \]
+    \end{itemize}
+\end{solution}

@@ -1,0 +1,70 @@
+\begin{solution}
+    \begin{enumerate}
+        \item \( n R m \) en \( \mathbb{Z} \) si \( nm \geq 0 \).
+
+        \textbf{No es relación de equivalencia.} No es simétrica, ya que si \( n = 0 \), entonces \( nR m \) para cualquier \( m \), pero \( mR n \) no necesariamente se cumple para \( m \neq 0 \).
+        \item \( a R b \) en \( \mathbb{Z} \) si \( a + b \) es par.
+        
+        \textbf{Es relación de equivalencia.}
+          \begin{itemize}
+                \item Reflexiva: \( a + a = 2a \), que es par.
+                \item Simétrica: Si \( a + b \) es par, entonces \( b + a \) también lo es.
+                \item Transitiva: Si \( a + b \) y \( b + c \) son pares, entonces \( a + c \) también lo es.
+          \end{itemize}
+        Partición: Números pares y números impares.   
+        \item \( a R b \) en \( \mathbb{Z} \) si \( a + b \) es impar.
+        
+        \textbf{No es relación de equivalencia.} No es reflexiva, ya que \( a + a \) es siempre par, no impar.
+        
+        \item \( a R b \) en \( \mathbb{Z} \) si \( a^2 + a = b^2 + b \).
+
+        \textbf{Es relación de equivalencia.}
+          \begin{itemize}
+            \item Reflexiva: \( a^2 + a = a^2 + a \).
+            \item Simétrica: Si \( a^2 + a = b^2 + b \), entonces \( b^2 + b = a^2 + a \).
+            \item Transitiva: Si \( a^2 + a = b^2 + b \) y \( b^2 + b = c^2 + c \), entonces \( a^2 + a = c^2 + c \).
+          \end{itemize}
+        Partición: Agrupa números según sus valores de \( n(n + 1) \), como \( \{0\}, \{-1, 0\}, \{2, -3\}, \{3, -4\}, \dots \).
+        
+        \item \( x R y \) en \( \mathbb{R} \) si \( |x| = |y| \).
+
+        \textbf{Es relación de equivalencia.}
+          \begin{itemize}
+            \item Reflexiva: \( |x| = |x| \).
+            \item Simétrica: Si \( |x| = |y| \), entonces \( |y| = |x| \).
+            \item Transitiva: Si \( |x| = |y| \) y \( |y| = |z| \), entonces \( |x| = |z| \).
+          \end{itemize}
+        Partición: Agrupa números en pares de opuestos: \( \{x, -x\} \).
+        
+        \item \( x R y \) en \( \mathbb{R} \) si \( x^2 + y^2 = 4 \).
+
+        \textbf{No es relación de equivalencia.} No es transitiva. Por ejemplo, \( (2, 0) \) y \( (0, 2) \) están relacionados con \( (0, 2) \) y \( (2, 0) \), pero no entre sí.
+        
+        \item \( (x, y) R (x', y') \) en \( \mathbb{R}^2 \) si \( y = y' \).
+
+        \textbf{Es relación de equivalencia.}
+          \begin{itemize}
+            \item Reflexiva: \( y = y \).
+            \item Simétrica: Si \( y = y' \), entonces \( y' = y \).
+            \item Transitiva: Si \( y = y' \) y \( y' = y'' \), entonces \( y = y'' \).
+          \end{itemize}
+        Partición: Agrupa puntos por coordenada \( y \), es decir, las líneas horizontales en \( \mathbb{R}^2 \).
+        \item \( x R y \) en \( \mathbb{R} \) si \( |x - y| \leq 4 \).
+
+        \textbf{No es relación de equivalencia.} No es transitiva. Por ejemplo, \( |x - y| \leq 4 \) y \( |y - z| \leq 4 \) no implica que \( |x - z| \leq 4 \).
+        
+        \item Considera \( M \) el conjunto de todos los meses de este año. \( a R b \) en \( M \) si \( a \) y \( b \) comienzan el mismo día de la semana.
+        
+        \textbf{Es relación de equivalencia.}
+          \begin{itemize}
+            \item Reflexiva: Cada mes comienza el mismo día que sí mismo.
+            \item Simétrica: Si \( a \) y \( b \) comienzan el mismo día, entonces \( b \) y \( a \) también.
+            \item Transitiva: Si \( a \) y \( b \), y \( b \) y \( c \) comienzan el mismo día, entonces \( a \) y \( c \) también.
+          \end{itemize}
+        Partición: Agrupa los meses según su día de inicio de la semana.
+
+        \item \( a R b \) en \( \mathbb{Z} \) si \( a = b \) o \( a + b = 3 \).
+        
+        \textbf{No es relación de equivalencia.} No es transitiva. Por ejemplo, \( 1 R 2 \) y \( 2 R 1 \), pero \( 1 R 1 \) no se cumple bajo la condición \( a + b = 3 \).
+    \end{enumerate}
+\end{solution}
