@@ -1,3 +1,268 @@
 \begin{solution}
-    Aquí va la solución.
+   \begin{enumerate}
+    \item \( f \) es inyectiva si y sólo si \( f^{-1}[f[X]] = X \) para todo \( X \subseteq A \).**
+    
+    \textbf{Demostración:}
+    
+    ($\Rightarrow$) Si \( f \) es inyectiva, entonces \( f^{-1}[f[X]] = X \) para todo \( X \subseteq A \).
+    
+    Sea \( X \subseteq A \). Queremos demostrar que \( f^{-1}[f[X]] = X \).
+    
+    Primero, probamos que \( X \subseteq f^{-1}[f[X]] \):
+    
+    Esto es siempre cierto, independientemente de si \( f \) es inyectiva o no.
+    
+    Sea \( x \in X \). Entonces, \( f(x) \in f[X] \).
+    
+    Por definición de preimagen:
+    
+    \[x \in f^{-1}[f[X]] \quad \text{porque} \quad f(x) \in f[X].\]
+    
+    Por lo tanto, \( x \in f^{-1}[f[X]] \), y así \( X \subseteq f^{-1}[f[X]] \).
+    
+    Ahora, probamos que \( f^{-1}[f[X]] \subseteq X \):
+    
+    Supongamos que \( y \in f^{-1}[f[X]] \). Entonces, \( f(y) \in f[X] \).
+    
+    Esto significa que existe \( x \in X \) tal que \( f(y) = f(x) \).
+    
+    Como \( f \) es inyectiva y \( f(y) = f(x) \), entonces \( y = x \).
+    
+    Pero \( x \in X \), por lo que \( y \in X \).
+    
+    Por lo tanto, \( f^{-1}[f[X]] \subseteq X \).
+    
+    \textbf{Conclusión:}
+    
+    Combinando ambos resultados, obtenemos \( f^{-1}[f[X]] = X \).
+    
+    ($\Leftarrow$) Si \( f^{-1}[f[X]] = X \) para todo \( X \subseteq A \), entonces \( f \) es inyectiva.
+    
+    Supongamos que \( f \) no es inyectiva. Entonces, existen \( a_1, a_2 \in A \) con \( a_1 \neq a_2 \) tales que \( f(a_1) = f(a_2) \).
+    
+    Sea \( X = \{ a_1 \} \).
+    
+    Entonces, \( f[X] = \{ f(a_1) \} \).
+    
+    Ahora, calculemos \( f^{-1}[f[X]] \):
+    
+    \[f^{-1}[f[X]] = f^{-1}[\{ f(a_1) \}] = \{ x \in A \mid f(x) = f(a_1) \}.\]
+    
+    Pero sabemos que tanto \( a_1 \) como \( a_2 \) están en \( f^{-1}[f[X]] \) porque \( f(a_1) = f(a_2) \).
+    
+    Por lo tanto:
+    \[f^{-1}[f[X]] \supseteq \{ a_1, a_2 \}.\]
+    
+    Pero \( X = \{ a_1 \} \), entonces \( f^{-1}[f[X]] \neq X \).
+    
+    Esto contradice la suposición de que \( f^{-1}[f[X]] = X \) para todo \( X \subseteq A \).
+    
+    \textbf{Conclusión:}
+    
+    Por contraposición, si \( f^{-1}[f[X]] = X \) para todo \( X \subseteq A \), entonces \( f \) es inyectiva.
+    
+    \item \( f \) es inyectiva si y sólo si \( f[X \cap Y] = f[X] \cap f[Y] \) para todo \( X, Y \subseteq A \).
+    
+    ($\Rightarrow$) Si \( f \) es inyectiva, entonces \( f[X \cap Y] = f[X] \cap f[Y] \).
+    
+    \textbf{Prueba:}
+    
+    Primero, probamos que \( f[X \cap Y] \subseteq f[X] \cap f[Y] \):
+    
+    Sea \( y \in f[X \cap Y] \). Entonces, existe \( x \in X \cap Y \) tal que \( y = f(x) \).
+    
+    Como \( x \in X \) y \( x \in Y \), entonces \( y \in f[X] \) y \( y \in f[Y] \).
+    
+    Por lo tanto, \( y \in f[X] \cap f[Y] \).
+    
+    Ahora, probamos que \( f[X] \cap f[Y] \subseteq f[X \cap Y] \):
+    
+    Sea \( y \in f[X] \cap f[Y] \). Entonces, existe \( x_1 \in X \) tal que \( y = f(x_1) \) y existe \( x_2 \in Y \) tal que \( y = f(x_2) \).
+    
+    Como \( f \) es inyectiva y \( f(x_1) = f(x_2) \), entonces \( x_1 = x_2 \).
+    
+    Por lo tanto, \( x_1 \in X \cap Y \), y así \( y = f(x_1) \in f[X \cap Y] \).
+    
+    \textbf{Conclusión:}
+    
+      Por ambos resultados, \( f[X \cap Y] = f[X] \cap f[Y] \).
+    
+    ($\Leftarrow$) Si \( f[X \cap Y] = f[X] \cap f[Y] \) para todo \( X, Y \subseteq A \), entonces \( f \) es inyectiva.
+    
+    \textbf{Prueba:}
+    
+    Supongamos que \( f \) no es inyectiva. Entonces, existen \( a_1, a_2 \in A \) con \( a_1 \neq a_2 \) tales que \( f(a_1) = f(a_2) \).
+    
+    Sea \( X = \{ a_1 \} \) y \( Y = \{ a_2 \} \).
+    
+    Entonces:
+    
+    \( X \cap Y = \emptyset \), por lo que \( f[X \cap Y] = f[\emptyset] = \emptyset \).
+
+    \( f[X] = \{ f(a_1) \} \).
+
+    \( f[Y] = \{ f(a_2) \} \).
+
+    Como \( f(a_1) = f(a_2) \), entonces \( f[X] = f[Y] = \{ f(a_1) \} \).
+    
+    Por lo tanto, \( f[X] \cap f[Y] = \{ f(a_1) \} \).
+    
+    Pero entonces:
+    
+    \[f[X \cap Y] = \emptyset \neq \{ f(a_1) \} = f[X] \cap f[Y].\]
+    
+    Esto contradice la suposición de que \( f[X \cap Y] = f[X] \cap f[Y] \).
+    
+    \textbf{Conclusión:}
+    
+    Por contraposición, si \( f[X \cap Y] = f[X] \cap f[Y] \) para todo \( X, Y \subseteq A \), entonces \( f \) es inyectiva.
+    
+    \item \( f \) es suprayectiva si y sólo si \( f[f^{-1}[Y]] = Y \) para todo \( Y \subseteq B \).
+    
+    \textbf{Demostración:}
+    
+    **($\Rightarrow$) Si \( f \) es suprayectiva, entonces \( f[f^{-1}[Y]] = Y \) para todo \( Y \subseteq B \).**
+    
+    \textbf{Prueba:}
+    
+    Sea \( Y \subseteq B \).
+    
+    Primero, probamos que \( f[f^{-1}[Y]] \subseteq Y \):
+    
+    Sea \( y \in f[f^{-1}[Y]] \). Entonces, existe \( x \in f^{-1}[Y] \) tal que \( y = f(x) \).
+    
+    Por definición de \( f^{-1}[Y] \), tenemos \( f(x) \in Y \).
+    
+    Entonces, \( y = f(x) \in Y \).
+    
+    Por lo tanto, \( f[f^{-1}[Y]] \subseteq Y \).
+    
+    Ahora, probamos que \( Y \subseteq f[f^{-1}[Y]] \):
+    
+    Sea \( y \in Y \).
+    
+    Como \( f \) es suprayectiva, existe \( x \in A \) tal que \( f(x) = y \).
+    
+    Por lo tanto, \( x \in f^{-1}[Y] \) porque \( f(x) = y \in Y \).
+    
+    Entonces, \( y = f(x) \in f[f^{-1}[Y]] \).
+    
+    Por lo tanto, \( Y \subseteq f[f^{-1}[Y]] \).
+    
+    \textbf{Conclusión:}
+    
+    Combinando ambos resultados, \( f[f^{-1}[Y]] = Y \).
+    
+    ($\Leftarrow$) Si \( f[f^{-1}[Y]] = Y \) para todo \( Y \subseteq B \), entonces \( f \) es suprayectiva.
+    
+    \textbf{Prueba:}
+    
+    Supongamos que \( f \) no es suprayectiva. Entonces, existe \( b_0 \in B \) tal que no existe \( a \in A \) con \( f(a) = b_0 \).
+    
+    Sea \( Y = \{ b_0 \} \).
+    
+    Entonces, \( f^{-1}[Y] = \emptyset \) porque no hay ningún \( a \in A \) tal que \( f(a) = b_0 \).
+    
+    Por lo tanto:
+    
+    \[f[f^{-1}[Y]] = f[\emptyset] = \emptyset \neq Y = \{ b_0 \}.\]
+    
+    Esto contradice la suposición de que \( f[f^{-1}[Y]] = Y \) para todo \( Y \subseteq B \).
+    
+    \textbf{Conclusión:}
+    
+    Por contraposición, si \( f[f^{-1}[Y]] = Y \) para todo \( Y \subseteq B \), entonces \( f \) es suprayectiva.
+    
+    \item \( f \) es biyectiva si y sólo si \( f[X^c] = (f[X])^c \) para todo \( X \subseteq A \).
+    
+    \textbf{Demostración:}
+    
+    Primero, recordemos que:
+    
+    \( X^c = A \setminus X \), el complemento de \( X \) en \( A \).
+
+    \( (f[X])^c = B \setminus f[X] \), el complemento de \( f[X] \) en \( B \).
+    
+    ($\Rightarrow$) Si \( f \) es biyectiva, entonces \( f[X^c] = (f[X])^c \) para todo \( X \subseteq A \).
+    
+    \textbf{Prueba:}
+    
+    Sea \( X \subseteq A \).
+    
+    Primero, probamos que \( f[X^c] \subseteq (f[X])^c \):
+    
+    Sea \( y \in f[X^c] \). Entonces, existe \( x \in X^c \) tal que \( y = f(x) \).
+    
+    Si \( y \in f[X] \), entonces existiría \( x' \in X \) tal que \( y = f(x') \).
+    
+    Pero como \( f \) es inyectiva (por ser biyectiva), \( x = x' \), lo cual es imposible porque \( x \in X^c \) y \( x' \in X \).
+    
+    Por lo tanto, \( y \notin f[X] \), y así \( y \in (f[X])^c \).
+    
+    Ahora, probamos que \( (f[X])^c \subseteq f[X^c] \):
+    
+    Sea \( y \in (f[X])^c \). Entonces, \( y \notin f[X] \).
+    
+    Como \( f \) es sobreyectiva, existe \( x \in A \) tal que \( f(x) = y \).
+    
+    Si \( x \in X \), entonces \( y = f(x) \in f[X] \), contradicción.
+    
+    Por lo tanto, \( x \in X^c \), y así \( y = f(x) \in f[X^c] \).
+    
+    \textbf{Conclusión:}
+    
+    Por ambos resultados, \( f[X^c] = (f[X])^c \).
+    
+    ($\Leftarrow$) Si \( f[X^c] = (f[X])^c \) para todo \( X \subseteq A \), entonces \( f \) es biyectiva.
+    
+    \textbf{Prueba de inyectividad:}
+    
+    Supongamos que \( f \) no es inyectiva. Entonces, existen \( a_1, a_2 \in A \) con \( a_1 \neq a_2 \) y \( f(a_1) = f(a_2) = y_0 \).
+    
+    Sea \( X = \{ a_1 \} \).
+    
+    Entonces:
+    
+    \( X^c = A \setminus \{ a_1 \} \).
+    
+    \( f[X] = \{ f(a_1) \} = \{ y_0 \} \).
+    
+    \( f[X^c] \) contiene al menos \( f(a_2) = y_0 \) porque \( a_2 \in X^c \).
+    
+      Por lo tanto, \( y_0 \in f[X^c] \).
+    
+      Pero entonces:
+    
+      \[
+      y_0 \in f[X^c] \implies y_0 \in (f[X])^c \quad \text{(por la suposición)}.
+      \]
+    
+      Sin embargo, \( y_0 \in f[X] \), por lo que \( y_0 \notin (f[X])^c \).
+    
+      Esto es una contradicción.
+    
+    \textbf{Prueba de sobreyectividad:}
+    
+    Supongamos que \( f \) no es sobreyectiva. Entonces, existe \( y_1 \in B \) tal que no existe \( a \in A \) con \( f(a) = y_1 \).
+    
+    Sea \( X = A \).
+    
+    Entonces:
+    
+    \( X^c = \emptyset \).
+
+    \( f[X] = f[A] \subsetneq B \) (porque \( f \) no es sobreyectiva).
+    
+    \( f[X^c] = f[\emptyset] = \emptyset \).
+    
+    \( (f[X])^c = B \setminus f[A] \), que contiene al menos \( y_1 \).
+    
+    Por lo tanto, \( y_1 \in (f[X])^c \).
+    
+    Pero \( f[X^c] = \emptyset \), entonces \( (f[X])^c \neq f[X^c] \), contradiciendo la suposición.
+    
+    \textbf{Conclusión:}
+    
+    Por contradicción, \( f \) debe ser inyectiva y sobreyectiva, es decir, biyectiva.
+  \end{enumerate}
 \end{solution}

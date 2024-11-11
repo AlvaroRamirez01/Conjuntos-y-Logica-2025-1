@@ -1,3 +1,164 @@
 \begin{solution}
-    Aquí va la solución.
+    \begin{enumerate}
+      \item ¿Existe \( g : \mathbb{N} \rightarrow \mathbb{N} \) tal que \( g \neq \text{Id}_{\mathbb{N}} \) y \( g \circ g = g \)?
+      
+      Respuesta: Sí, existe tal función.
+      
+      \textbf{Explicación:}
+      
+      Una función que satisface \( g \circ g = g \) se denomina idempotente. Queremos encontrar una función idempotente que no sea la identidad.
+      
+      \textbf{Ejemplo de función:}
+      
+      Definamos \( g : \mathbb{N} \rightarrow \mathbb{N} \) como:
+      
+      \[
+      g(n) = \begin{cases}
+      0, & \text{si } n \text{ es impar} \\
+      n, & \text{si } n \text{ es par}
+      \end{cases}
+      \]
+      
+      \textbf{Verificación:}
+      
+      \( g \neq \text{Id}_{\mathbb{N}} \): Porque \( g(n) \) cambia los números impares a 0, por lo que no es la función identidad.
+        
+      Idempotencia (\( g \circ g = g \)):
+      
+      Para todo \( n \in \mathbb{N} \):
+      
+      Si \( n \) es par:
+          \[
+          g(g(n)) = g(n) = n
+          \]
+
+      Si \( n \) es impar:
+          \[
+          g(g(n)) = g(0) = g(0) = 0 = g(n)
+          \]
+      
+      En ambos casos, \( g(g(n)) = g(n) \), por lo que \( g \circ g = g \).
+      
+      \textbf{Conclusión:} Existe al menos una función \( g \) que cumple las condiciones dadas.
+      
+      \item ¿Existe \( g : \mathbb{N} \rightarrow \mathbb{N} \) biyectiva tal que \( g \neq \text{Id}_{\mathbb{N}} \) y \( g \circ g = g \)?
+      
+      \textbf{Respuesta:} No, no existe tal función.
+      
+      \textbf{Explicación:}
+      
+      Supongamos que existe una función biyectiva \( g : \mathbb{N} \rightarrow \mathbb{N} \) tal que \( g \circ g = g \) y \( g \neq \text{Id}_{\mathbb{N}} \).
+      
+      \textbf{Demostración por contradicción:}
+      
+      \( g \) es biyectiva, por lo que tiene una función inversa \( g^{-1} \).
+      
+      Dado que \( g \circ g = g \), podemos aplicar \( g^{-1} \) a ambos lados:
+      
+        \[
+        g^{-1} \circ g \circ g = g^{-1} \circ g
+        \]
+      
+      Simplificando:
+      
+        \[
+        g \circ g^{-1} \circ g = \text{Id}_{\mathbb{N}} \circ g = g
+        \]
+      
+      Pero dado que \( g^{-1} \circ g = \text{Id}_{\mathbb{N}} \), tenemos:
+      
+        \[
+        \text{Id}_{\mathbb{N}} \circ g = g
+        \]
+      
+      Esto implica que \( g = g \), lo cual es siempre cierto. Sin embargo, no hemos llegado a una contradicción aún.
+      
+      Consideremos que \( g \) es idempotente y biyectiva. La única función biyectiva idempotente es la identidad. Esto se debe a que si \( g \) es idempotente (\( g \circ g = g \)) y biyectiva, entonces para todo \( n \in \mathbb{N} \):
+      
+        \[
+        g(n) = g(g(n))
+        \]
+      
+      Como \( g \) es inyectiva, esto implica que:
+      
+        \[
+        n = g(n)
+        \]
+      
+      Por lo tanto, \( g \) es la identidad, lo cual contradice \( g \neq \text{Id}_{\mathbb{N}} \).
+      
+      Conclusión: No existe una función biyectiva \( g \) distinta de la identidad que sea idempotente.
+      
+      \item ¿Existe \( g : \mathbb{N} \rightarrow \mathbb{N} \) biyectiva tal que \( g \neq \text{Id}_{\mathbb{N}} \) y \( g \circ g = \text{Id}_{\mathbb{N}} \)?
+      
+      \textbf{Respuesta:} Sí, existe tal función.
+      
+      \textbf{Explicación:}
+      
+      Una función que satisface \( g \circ g = \text{Id}_{\mathbb{N}} \) se denomina involutiva. Queremos encontrar una función biyectiva involutiva que no sea la identidad.
+      
+      \textbf{Ejemplo de función:}
+      
+      Definamos \( g : \mathbb{N} \rightarrow \mathbb{N} \) como sigue:
+      
+      \[
+      g(n) = \begin{cases}
+      n + 1, & \text{si } n \text{ es par} \\
+      n - 1, & \text{si } n \text{ es impar}
+      \end{cases}
+      \]
+      
+      \textbf{Verificación:}
+      
+      \( g \) es biyectiva:
+      
+      \textbf{Inyectividad:} Supongamos que \( g(n_1) = g(n_2) \). Entonces:
+      
+      Si ambos \( n_1 \) y \( n_2 \) son pares:
+      \[n_1 + 1 = n_2 + 1 \implies n_1 = n_2\]
+      
+      Si ambos son impares: 
+      \[n_1 - 1 = n_2 - 1 \implies n_1 = n_2\]
+      
+      Si uno es par y otro impar, sus imágenes serán distintas, pues uno será \( n + 1 \) y otro \( n - 1 \).
+      
+      \textbf{Sobreyectividad:} Para cualquier \( m \in \mathbb{N} \):
+      
+      Si \( m \) es par, entonces \( m = g(m - 1) \) (porque \( m - 1 \) es impar).
+      
+      Si \( m \) es impar, entonces \( m = g(m + 1) \) (porque \( m + 1 \) es par).
+      
+      \( g \neq \text{Id}_{\mathbb{N}} \):
+      
+      Porque, por ejemplo, \( g(0) = 1 \neq 0 \).
+      
+      Involutividad (\( g \circ g = \text{Id}_{\mathbb{N}} \)):
+      
+      Para todo \( n \in \mathbb{N} \):
+      
+      \begin{itemize}
+        \item Si \( n \) es par:
+        
+        \( g(n) = n + 1 \) (impar).
+            
+        \( g(g(n)) = g(n + 1) \).
+        
+        Como \( n + 1 \) es impar, entonces:
+        
+        \[g(n + 1) = (n + 1) - 1 = n\]
+        
+        \item Si \( n \) es impar:
+        
+        \( g(n) = n - 1 \) (par).
+        
+        \( g(g(n)) = g(n - 1) \).
+        
+        Como \( n - 1 \) es par, entonces:
+        \[g(n - 1) = (n - 1) + 1 = n\]
+      \end{itemize}
+      
+        En ambos casos, \( g(g(n)) = n \), por lo que \( g \circ g = \text{Id}_{\mathbb{N}} \).
+      
+      \textbf{Conclusión:} Existe una función biyectiva \( g \) distinta de la identidad que es involutiva.
+    \end{enumerate}
 \end{solution}

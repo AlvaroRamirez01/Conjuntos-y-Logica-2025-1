@@ -1,3 +1,101 @@
 \begin{solution}
-    Aquí va la solución.
+	\begin{enumerate}
+		\item \( f : \mathbb{N} \rightarrow \mathbb{N}, \quad f(n) = 2n \)
+		      \begin{itemize}
+			      \item \textbf{Inyectividad:}Una función es inyectiva si \( f(n_1) = f(n_2) \) implica \( n_1 = n_2 \).
+			            Supongamos que \( f(n_1) = f(n_2) \):
+
+			            \[2n_1 = 2n_2 \implies n_1 = n_2\]
+
+			            Por lo tanto, \( f \) es inyectiva.
+
+			      \item \textbf{Suprayectividad:} Una función es suprayectiva si para todo \( y \in \mathbb{N} \), existe \( n \in \mathbb{N} \) tal que \( f(n) = y \).
+
+			            El codominio es \( \mathbb{N} \), pero la imagen de \( f \) es el conjunto de los números naturales pares \( \{0, 2, 4, 6, \dots\} \).
+
+			            Hay números naturales impares que no son imagen de ningún elemento de \( \mathbb{N} \) bajo \( f \).
+
+			            Por lo tanto, \( f \) no es suprayectiva.
+
+			      \item \textbf{Biyectividad:} Como \( f \) es inyectiva pero no suprayectiva, \( f \) no es biyectiva.
+		      \end{itemize}
+
+		\item \( f : \mathbb{N} \rightarrow \mathbb{N}, \quad f(n) = n + 7 \)
+		      \begin{itemize}
+			      \item \textbf{Inyectividad:}
+
+			            Supongamos que \( f(n_1) = f(n_2) \):
+
+			            \[
+				            n_1 + 7 = n_2 + 7 \implies n_1 = n_2
+			            \]
+
+			            Por lo tanto, \( f \) es inyectiva.
+
+			      \item \textbf{Suprayectividad:}
+
+			            La imagen de \( f \) es \( \{ n + 7 \mid n \in \mathbb{N} \} \). El menor valor es \( f(0) = 7 \) (si consideramos \( \mathbb{N} = \{0, 1, 2, \dots\} \)).
+
+			            Los números naturales menores que 7 no son imagen de ningún \( n \in \mathbb{N} \).
+
+			            Por lo tanto, \( f \) no es suprayectiva.
+
+			      \item \textbf{Biyectividad:} Como \( f \) es inyectiva pero no suprayectiva, \( f \) no es biyectiva.
+		      \end{itemize}
+
+		\item  \( f : \mathbb{Z} \rightarrow \mathbb{Z}, \quad f(n) = n + 7 \)
+		      \begin{itemize}
+			      \item \textbf{Inyectividad:}
+
+			            Si \( f(n_1) = f(n_2) \):
+
+			            \[
+				            n_1 + 7 = n_2 + 7 \implies n_1 = n_2
+			            \]
+
+			            Por lo tanto, \( f \) es inyectiva.
+
+			      \item \textbf{Suprayectividad:}
+
+			            Para cualquier \( y \in \mathbb{Z} \), podemos encontrar \( n = y - 7 \in \mathbb{Z} \) tal que:
+
+			            \[
+				            f(n) = (y - 7) + 7 = y
+				            \,           \]
+
+			            Por lo tanto, \( f \) es suprayectiva.
+
+			      \item \textbf{Biyectividad:} Como \( f \) es inyectiva y suprayectiva, \( f \) es biyectiva.
+		      \end{itemize}
+
+		\item  \( f : A \rightarrow A/R, \quad f(a) = [a]_R \)
+
+		      Donde \( A \) es un conjunto y \( R \) es una relación de equivalencia sobre \( A \).
+
+		      \begin{itemize}
+			      \item \textbf{Inyectividad:}
+
+			            La función \( f \) asigna a cada elemento \( a \in A \) su clase de equivalencia \( [a]_R \).
+
+			            Si \( f(a_1) = f(a_2) \), entonces:
+
+			            \[
+				            [a_1]_R = [a_2]_R \implies a_1 \sim a_2
+			            \]
+
+			            Esto significa que \( a_1 \) y \( a_2 \) son equivalentes bajo \( R \), pero no necesariamente iguales.
+
+			            Por lo tanto, \( f \) no es inyectiva a menos que \( R \) sea la relación de igualdad.
+
+			      \item \textbf{Suprayectividad:}
+
+			            Cada clase de equivalencia \( [a]_R \in A/R \) tiene al menos un representante en \( A \).
+
+			            Por definición, para cualquier \( [a]_R \in A/R \), existe \( a \in A \) tal que \( f(a) = [a]_R \).
+
+			            Por lo tanto, \( f \) es suprayectiva.
+
+			      \item \textbf{Biyectividad:} Como \( f \) es suprayectiva pero no inyectiva, \( f \) no es biyectiva.
+		      \end{itemize}
+	\end{enumerate}
 \end{solution}

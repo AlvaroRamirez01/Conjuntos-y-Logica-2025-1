@@ -1,3 +1,71 @@
 \begin{solution}
-    Aquí va la solución.
+\begin{enumerate}
+    \item \(\{(n, m) \in \mathbb{Z} \times \mathbb{Z} \mid n, m \geq 0 \ \text{y} \ 5n = m\}\)
+
+    \textbf{Análisis:} Para cada \( n \geq 0 \), existe un único \( m \geq 0 \) dado por \( m = 5n \).
+    
+    \textbf{Conclusión:} Es una función.
+    
+    \begin{itemize}
+        \item Dominio: \( \{ n \in \mathbb{Z} \mid n \geq 0 \} \)
+        \item Imagen: \( \{ m \in \mathbb{Z} \mid m = 5n, \ n \geq 0 \} = \{0, 5, 10, 15, \dots\} \)
+    \end{itemize}
+    
+    \item \(\{(n, m) \in \mathbb{Z} \times \mathbb{Z} \mid n, m \geq 0 \ \text{y} \ 5m = n\}\)
+    
+    \textbf{Análisis:} Solo los \( n \geq 0 \) múltiplos de 5 tienen un \( m \geq 0 \) correspondiente dado por \( m = \frac{n}{5} \).
+    
+    \textbf{Conclusión:} Es una función, pero su dominio está restringido.
+    
+    \begin{itemize}
+        \item Dominio:\( \{ n \in \mathbb{Z} \mid n \geq 0 \ \text{y} \ n \ \text{es múltiplo de} \ 5 \} \)
+        \item Imagen: \( \{ m \in \mathbb{Z} \mid m \geq 0 \} \)
+    \end{itemize}
+    
+    \item \(\{(n, m) \in \mathbb{Z} \times \mathbb{Z} \mid n, m \geq 0 \ \text{y} \ m \leq n\}\)
+
+    \textbf{Análisis:} Para cada \( n \geq 0 \), existen múltiples valores de \( m \) que satisfacen \( m \leq n \).
+        
+    \textbf{Conclusión:} No es una función (no hay unicidad de \( m \) para cada \( n \)).
+    
+    \item \(\{(n, m) \in \mathbb{Z} \times \mathbb{Z} \mid n \geq 0 \ \text{y} \ m = 3\}\)
+    
+    \textbf{Análisis:} Para cada \( n \geq 0 \), \( m \) es siempre 3.
+    
+    \textbf{Conclusión:} Es una función.
+    
+    \begin{itemize}
+        \item Dominio: \( \{ n \in \mathbb{Z} \mid n \geq 0 \} \)
+        \item Imagen: \( \{3\} \)
+    \end{itemize}
+    
+    
+    \item \(\{(n, m) \in \mathbb{Z} \times \mathbb{Z} \mid m = n^2\}\)
+    
+    \textbf{Análisis:} Para cada \( n \in \mathbb{Z} \), existe un único \( m \) dado por \( m = n^2 \).
+    
+    \textbf{Conclusión:} Es una función.
+    
+    \begin{itemize}
+        \item Dominio: \( \mathbb{Z} \)
+        \item Imagen: \( \{ m \in \mathbb{Z} \mid m \geq 0 \ \text{y} \ m \ \text{es un cuadrado perfecto} \} \)
+    \end{itemize}
+    
+    \item \(\{(n, m) \in \mathbb{Z} \times \mathbb{Z} \mid m^2 = n^2\}\)
+    
+    \textbf{Análisis:} Para cada \( n \), hay dos posibles valores de \( m \): \( m = n \) y \( m = -n \).
+    
+    \textbf{Conclusión:} No es una función (no hay unicidad de \( m \) para cada \( n \)).
+    
+    \item \(\{(n, m) \in \mathbb{Z} \times \mathbb{Z} \mid 4n + 2m = 6\}\)
+    
+    \textbf{Análisis:} Despejando \( m \), obtenemos \( m = 3 - 2n \). Para cada \( n \in \mathbb{Z} \), existe un único \( m \).
+    
+    \textbf{Conclusión:} Es una función.
+    
+    \begin{itemize}
+        \item Dominio: \( \mathbb{Z} \)
+        \item Imagen: \( \{ m \in \mathbb{Z} \mid m = 3 - 2n, \ n \in \mathbb{Z} \} \), es decir, todos los números enteros impares.
+    \end{itemize}
+\end{enumerate}
 \end{solution}

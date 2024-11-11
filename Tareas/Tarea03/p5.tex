@@ -1,3 +1,128 @@
 \begin{solution}
-    Aquí va la solución.
+
+    Sea \( f : A \rightarrow B \) una función. Definimos la asignación \( F : \mathcal{P}(B) \rightarrow \mathcal{P}(A) \) con regla de correspondencia \( F(Y) = f^{-1}[Y] \), donde \( \mathcal{P}(B) \) es el conjunto de las partes de \( B \).
+    
+    \begin{enumerate}
+        \item \( F \) es función.
+        
+        \textbf{Demostración:}
+        
+        Para demostrar que \( F \) es una función de \( \mathcal{P}(B) \) en \( \mathcal{P}(A) \), debemos mostrar que para cada \( Y \subseteq B \), existe un único \( F(Y) \subseteq A \).
+        
+        Por la definición de \( F \), para cada \( Y \subseteq B \), se asigna el conjunto \( F(Y) = f^{-1}[Y] \), que es el conjunto de todos los elementos en \( A \) cuya imagen por \( f \) pertenece a \( Y \):
+        
+        \[
+        f^{-1}[Y] = \{ a \in A \mid f(a) \in Y \}.
+        \]
+        
+        Este conjunto está bien definido para cada \( Y \subseteq B \). Por lo tanto, \( F \) es una función de \( \mathcal{P}(B) \) en \( \mathcal{P}(A) \).
+        
+        \item 2. Si \( f \) es inyectiva, entonces \( F \) es sobreyectiva.
+        
+        \textbf{Demostración:}
+        
+        Supongamos que \( f \) es inyectiva. Queremos demostrar que \( F \) es sobreyectiva, es decir, que para todo \( X \subseteq A \), existe \( Y \subseteq B \) tal que \( F(Y) = X \).
+        
+        Sea \( X \subseteq A \). Definamos \( Y = f[X] \), es decir:
+        
+        \[
+        Y = \{ f(a) \mid a \in X \}.
+        \]
+        
+        Ahora, calculemos \( F(Y) \):
+        
+        \[
+        F(Y) = f^{-1}[Y] = \{ a \in A \mid f(a) \in Y \}.
+        \]
+        
+        Pero como \( Y = f[X] \), entonces \( f(a) \in Y \) si y solo si \( f(a) \in f[X] \). Dado que \( f \) es inyectiva, \( f(a) \in f[X] \) si y solo si \( a \in X \).
+        
+        Por lo tanto:
+        
+        \[
+        F(Y) = \{ a \in A \mid a \in X \} = X.
+        \]
+        
+        Así, para todo \( X \subseteq A \), existe \( Y = f[X] \subseteq B \) tal que \( F(Y) = X \).
+        
+        \textbf{Conclusión:} \( F \) es sobreyectiva.
+        
+        \item Si \( f \) es suprayectiva, entonces \( F \) es inyectiva.
+        
+        \textbf{Demostración:}
+        
+        Supongamos que \( f \) es suprayectiva. Queremos demostrar que \( F \) es inyectiva, es decir, que si \( F(Y_1) = F(Y_2) \) entonces \( Y_1 = Y_2 \).
+        
+        Sea \( Y_1, Y_2 \subseteq B \) tales que \( F(Y_1) = F(Y_2) \). Entonces:
+        
+        \[
+        f^{-1}[Y_1] = f^{-1}[Y_2].
+        \]
+        
+        Queremos demostrar que \( Y_1 = Y_2 \).
+        
+        Dado que \( f \) es suprayectiva, para todo \( y \in B \) existe \( a \in A \) tal que \( f(a) = y \).
+        
+        Ahora, tomemos \( y \in Y_1 \). Como \( f \) es suprayectiva, existe \( a \in A \) tal que \( f(a) = y \). Entonces, \( a \in f^{-1}[Y_1] \).
+        
+        Pero \( f^{-1}[Y_1] = f^{-1}[Y_2] \), por lo que \( a \in f^{-1}[Y_2] \), lo que implica que \( f(a) \in Y_2 \). Por lo tanto, \( y \in Y_2 \).
+        
+        De manera similar, si \( y \in Y_2 \), entonces \( y \in Y_1 \).
+        
+        Por lo tanto, \( Y_1 = Y_2 \).
+        
+        \textbf{Conclusión:} \( F \) es inyectiva.
+        
+        \item Si \( F \) es sobreyectiva, entonces \( f \) es inyectiva.
+        
+        \textbf{Demostración:}
+        
+        Supongamos que \( F \) es sobreyectiva y que \( f \) no es inyectiva. Buscaremos una contradicción.
+        
+        Como \( f \) no es inyectiva, existen \( a_1, a_2 \in A \) con \( a_1 \neq a_2 \) tales que \( f(a_1) = f(a_2) = b \).
+        
+        Consideremos el conjunto \( X = \{ a_1 \} \subseteq A \). Como \( F \) es sobreyectiva, existe \( Y \subseteq B \) tal que \( F(Y) = X \).
+        
+        Entonces, \( F(Y) = f^{-1}[Y] = \{ a \in A \mid f(a) \in Y \} = \{ a_1 \} \).
+        
+        Pero sabemos que \( f(a_1) = b \), por lo que \( a_1 \in f^{-1}[Y] \) implica que \( b = f(a_1) \in Y \).
+        
+        Del mismo modo, como \( f(a_2) = b \) y \( b \in Y \), entonces \( a_2 \in f^{-1}[Y] \).
+        
+        Esto significa que \( a_2 \in F(Y) = \{ a_1 \} \), lo cual es una contradicción, ya que \( a_2 \neq a_1 \).
+        
+        \textbf{Conclusión:} Nuestra suposición de que \( f \) no es inyectiva conduce a una contradicción. Por lo tanto, si \( F \) es sobreyectiva, entonces \( f \) es inyectiva.
+        
+        \item Si \( F \) es inyectiva, entonces \( F \) es sobreyectiva.
+        
+        \textbf{Demostración:}
+        
+        Supongamos que \( F \) es inyectiva. Queremos demostrar que \( F \) es sobreyectiva, es decir, que para todo \( X \subseteq A \), existe \( Y \subseteq B \) tal que \( F(Y) = X \).
+        
+        Sin embargo, en general, la inyectividad de \( F \) no implica que \( F \) sea sobreyectiva. Veamos un contraejemplo.
+        
+        \textbf{Contraejemplo:}
+        
+        Consideremos los conjuntos \( A = \{1\} \) y \( B = \{a, b\} \). Definamos \( f : A \rightarrow B \) como \( f(1) = a \).
+        
+        La función \( f \) es inyectiva (ya que \( A \) tiene un solo elemento), pero no es suprayectiva (ya que \( b \notin f(A) \)).
+        
+        Ahora, definamos \( F : \mathcal{P}(B) \rightarrow \mathcal{P}(A) \):
+        
+        \( F(\emptyset) = f^{-1}[\emptyset] = \emptyset \).
+        
+        \( F(\{a\}) = f^{-1}[\{a\}] = \{1\} \).
+        
+        \( F(\{b\}) = f^{-1}[\{b\}] = \emptyset \).
+        
+        \( F(\{a, b\}) = f^{-1}[\{a, b\}] = \{1\} \).
+        
+        Observamos que \( F(\{a\}) = F(\{a, b\}) = \{1\} \). Sin embargo, \( \{a\} \neq \{a, b\} \), lo que indica que \( F \) no es inyectiva, contradiciendo nuestra suposición.
+        
+        Pero este contraejemplo muestra que la inyectividad de \( F \) no garantiza su sobreyectividad. De hecho, en este ejemplo, \( F \) no es sobreyectiva (ya que no alcanza ciertos subconjuntos de \( \mathcal{P}(A) \)).
+        
+        \textbf{Conclusión:}
+        
+        La inyectividad de \( F \) no implica que \( F \) sea sobreyectiva. Por lo tanto, el enunciado es falso en general.
+    \end{enumerate}
 \end{solution}
